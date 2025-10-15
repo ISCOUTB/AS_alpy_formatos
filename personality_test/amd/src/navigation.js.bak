@@ -1,0 +1,207 @@
+define(['jquery', 'core/str', 'core/notification'], function($, Str, Notification) {
+    return {
+        init: function() {
+            console.log('Inicializando módulo de navegación...'); // Debug
+
+            // Variables para el seguimiento del progreso
+            var currentSection = null;
+            var sections = {};
+            var totalQuestions = 0;
+            var answeredQuestions = 0;
+
+            // Inicializar datos de las secciones y validar estructura
+            $('.test-section').each(function() {
+                var sectionId = $(this).attr('id');
+                console.log('Inicializando sección:', sectionId); // Debug
+                
+                sections[sectionId] = {
+                    total: $(this).find('.question-container').length,
+                    answered: 0,
+                    element: $(this)
+                };
+                totalQuestions += sections[sectionId].total;
+
+                // Contar preguntas ya respondidas
+                sections[sectionId].answered = $(this).find('input[type="radio"]:checked').length;
+                answeredQuestions += sections[sectionId].answered;
+            });
+
+            // Función para actualizar el indicador de progreso
+            function updateProgress(sectionId) {
+                var section = sections[sectionId];
+                // Actualizar progreso de la sección
+                $('.section-navigation-item[data-section="' + sectionId + '"] .progress-indicator')
+                    .text(section.answered + '/' + section.total);
+
+                // Actualizar barra de progreso general si existe
+                var totalProgress = Math.round((answeredQuestions / totalQuestions) * 100);
+                var progressBar = $('.test-progress');
+                if (progressBar.length) {
+                    progressBar.css('width', totalProgress + '%')
+                        .attr('aria-valuenow', totalProgress);
+                }
+
+                // Actualizar estado del botón de envío
+                if (answeredQuestions === totalQuestions) {
+                    $('.submit-test').removeAttr('disabled').removeClass('disabled');
+                } else {
+                    $('.submit-test').attr('disabled', 'disabled').addClass('disabled');
+                }
+            }
+
+            // Función para mostrar una sección
+            function showSection(sectionId) {
+                console.log('Intentando mostrar sección:', sectionId);
+                
+                if (!sectionId) {
+                    console.error('ID de sección no proporcionado');
+                    return;
+                }
+
+                if (currentSection === sectionId) {
+                    console.log('Ya estamos en esta sección');
+                    return;
+                }
+
+                var $newSection = $('#' + sectionId);
+                if (!$newSection.length) {
+                    console.error('Sección no encontrada en el DOM:', sectionId);
+                    return;
+                }
+
+                console.log('Cambiando de sección:', currentSection, '->', sectionId);
+
+                // Primero actualizamos la navegación
+                $('.section-navigation-item').removeClass('active');
+                $('.section-navigation-item[data-section="' + sectionId + '"]').addClass('active');
+
+                // Luego ocultamos todas las secciones excepto la nueva
+                $('.test-section').not($newSection).hide();
+
+                // Mostramos la nueva sección
+                $newSection.fadeIn(300);
+
+                // Actualizamos la sección actual
+                currentSection = sectionId;
+
+                // Actualizamos el progreso
+                updateProgress(sectionId);
+
+                // Scroll suave
+                $('html, body').animate({
+                    scrollTop: $newSection.offset().top - 20
+                }, 300);
+
+                console.log('Sección cambiada exitosamente a:', sectionId);
+            }
+            }
+
+            // Inicializar con la primera sección
+            currentSection = $('.test-section').first().attr('id');
+            
+            // Ocultar todas las secciones excepto la primera
+            $('.test-section').each(function() {
+                if ($(this).attr('id') !== currentSection) {
+                    $(this).hide();
+                }
+            });
+            
+            // Asegurarse de que la primera sección esté visible
+            $('#' + currentSection).show();
+            
+            // Activar el primer ítem de navegación
+            $('.section-navigation-item[data-section="' + currentSection + '"]')
+                .addClass('active')
+                .siblings()
+                .removeClass('active');
+            
+            // Actualizar el progreso inicial
+            updateProgress(currentSection);
+
+            // Manejar navegación por la barra lateral y elementos de sección
+            $(document).on('click', '.section-navigation-item, .section-link', function(e) {
+                e.preventDefault();
+                var targetSection;
+                
+                // Comprobar si el clic fue en .section-link o en .section-navigation-item
+                if ($(e.target).closest('.section-link').length) {
+                    targetSection = $(this).closest('.section-navigation-item').data('section');
+                } else {
+                    targetSection = $(this).data('section');
+                }
+                
+                if (targetSection) {
+                    console.log('Navegando a sección:', targetSection); // Debug
+                    showSection(targetSection);
+                }
+            });
+
+            // Manejar botones de navegación entre secciones
+            $(document).on('click', '.next-section', function() {
+                var sections = $('.test-section');
+                var currentIndex = sections.index($('#' + currentSection));
+                if (currentIndex < sections.length - 1) {
+                    var nextSection = sections.eq(currentIndex + 1).attr('id');
+                    showSection(nextSection);
+                }
+            });
+
+            $(document).on('click', '.prev-section', function() {
+                var sections = $('.test-section');
+                var currentIndex = sections.index($('#' + currentSection));
+                if (currentIndex > 0) {
+                    var prevSection = sections.eq(currentIndex - 1).attr('id');
+                    showSection(prevSection);
+                }
+            });
+
+            // Manejar respuestas a las preguntas
+            $('input[type="radio"]').on('change', function() {
+                var questionContainer = $(this).closest('.question-container');
+                var sectionId = questionContainer.closest('.test-section').attr('id');
+                
+                if (!questionContainer.hasClass('answered')) {
+                    questionContainer.addClass('answered');
+                    sections[sectionId].answered++;
+                    answeredQuestions++;
+                }
+
+                // Actualizar estilos
+                $(this).closest('.question-options').find('label').removeClass('selected');
+                $(this).next('label').addClass('selected');
+                
+                // Actualizar progreso
+                updateProgress(sectionId);
+
+                // Remover clase de no respondida si existía
+                questionContainer.removeClass('unanswered');
+            });
+
+            // Validación antes de enviar
+            $('#personality-test-form').on('submit', function(e) {
+                var unanswered = $('.question-container').filter(function() {
+                    return !$(this).find('input[type="radio"]:checked').length;
+                });
+
+                if (unanswered.length) {
+                    e.preventDefault();
+                    // Obtener el mensaje de error localizado
+                    Str.get_string('please_answer_all', 'block_personality_test')
+                        .then(function(message) {
+                            // Mostrar notificación de Moodle
+                            Notification.alert('', message);
+                            // Mostrar la primera sección con preguntas sin responder
+                            var firstUnansweredSection = $(unanswered[0]).closest('.test-section').attr('id');
+                            showSection(firstUnansweredSection);
+                            // Resaltar preguntas sin responder
+                            unanswered.addClass('unanswered');
+                        })
+                        .catch(Notification.exception);
+                }
+            });
+
+            // Actualizar estado inicial de los botones
+            updateProgress(currentSection);
+        }
+    };
+});
