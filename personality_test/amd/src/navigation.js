@@ -1,19 +1,10 @@
-define(['jquery', 'core/str', 'core/notification'], function($, Str, Notification) {
+define(['jquery'], function($) {
     return {
         init: function() {
-            // Variables de estado
-            var currentSection = 'section1'; // Empezar en la primera sección
-            var sections = {};
-            var totalQuestions = 0;
-            var answeredQuestions = 0;
+            console.log('Inicializando navegación del test...');
 
-            // Ocultar todas las secciones excepto la activa al inicio
-            console.log('Inicializando visibilidad de secciones...');
-            $('.test-section').each(function() {
-                var $section = $(this);
-                console.log('Sección encontrada:', $section.attr('id'));
-                console.log('Preguntas en la sección:', $section.find('.question-container').length);
-            });
+            // Ocultar todas las secciones excepto la primera
+            $('.test-section:not(:first)').hide();
             
             $('.test-section').hide();
             var $activeSection = $('.test-section[data-active="true"]');
@@ -58,11 +49,43 @@ define(['jquery', 'core/str', 'core/notification'], function($, Str, Notificatio
                 $('.section-navigation-item').removeClass('active');
                 $('.section-navigation-item[data-section="' + sectionId + '"]').addClass('active');
 
-                // Actualizar estado
-                currentSection = sectionId;
-                updateProgress(sectionId);
+                // Obtener todas las secciones en orden
+                var sectionElements = $('.test-section');
+                var currentIndex = sectionElements.index($('#' + sectionId));
+                var totalSections = sectionElements.length;
 
-                // Scroll suave
+                // Actualizar visibilidad de los botones de navegación
+                var $prevButton = $('.prev-section');
+                var $nextButton = $('.next-section');
+                var $submitButton = $('.submit-test');
+
+                // Primera sección
+                if (currentIndex === 0) {
+                    $prevButton.hide();
+                    $nextButton.show();
+                    $submitButton.hide();
+                }
+                // Última sección
+                else if (currentIndex === totalSections - 1) {
+                    $prevButton.show();
+                    $nextButton.hide();
+                    // Mostrar botón submit solo si todas las preguntas están respondidas
+                    if (answeredQuestions === totalQuestions) {
+                        $submitButton.show().prop('disabled', false);
+                    } else {
+                        $submitButton.show().prop('disabled', true);
+                    }
+                }
+                // Secciones intermedias
+                else {
+                    $prevButton.show();
+                    $nextButton.show();
+                    $submitButton.hide();
+                }
+
+            // Actualizar estado
+            currentSection = sectionId;
+            updateProgress(sectionId);                // Scroll suave
                 $('html, body').animate({
                     scrollTop: $newSection.offset().top - 20
                 }, 300);
@@ -80,6 +103,24 @@ define(['jquery', 'core/str', 'core/notification'], function($, Str, Notificatio
                 answeredQuestions += sections[sectionId].answered;
             });
 
+            // Monitorear cambios en las respuestas
+            $(document).on('change', 'input[type="radio"]', function() {
+                var $section = $(this).closest('.test-section');
+                var sectionId = $section.attr('id');
+                
+                // Actualizar conteo de respuestas
+                sections[sectionId].answered = $section.find('input[type="radio"]:checked').length;
+                
+                // Recalcular total de respuestas
+                answeredQuestions = 0;
+                Object.values(sections).forEach(function(section) {
+                    answeredQuestions += section.answered;
+                });
+                
+                // Actualizar progreso
+                updateProgress(sectionId);
+            });
+
             // Configurar manejadores de eventos
             
             // 1. Navegación en barra lateral
@@ -90,16 +131,21 @@ define(['jquery', 'core/str', 'core/notification'], function($, Str, Notificatio
             });
 
             // 2. Botones siguiente/anterior
-            $(document).on('click', '.next-section', function() {
-                var targetSection = $(this).data('section');
-                if (targetSection) showSection(targetSection);
+            $('.next-section').on('click', function(e) {
+                e.preventDefault();
+                var targetSection = $(this).data('target');
+                if (targetSection) {
+                    showSection($('.test-section:visible').attr('id'), targetSection);
+                }
             });
 
-            $(document).on('click', '.prev-section', function() {
-                var targetSection = $(this).data('section');
-                if (targetSection) showSection(targetSection);
+            $('.prev-section').on('click', function(e) {
+                e.preventDefault();
+                var targetSection = $(this).data('target');
+                if (targetSection) {
+                    showSection($('.test-section:visible').attr('id'), targetSection);
+                }
             });
-
             // 3. Manejo de respuestas
             $(document).on('change', 'input[type="radio"]', function() {
                 var $question = $(this).closest('.question-container');
