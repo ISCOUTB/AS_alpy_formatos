@@ -156,11 +156,25 @@ try {
                 });
             });
             
+            // Función para actualizar el progreso total
+            function updateTotalProgress() {
+                var totalQuestions = 0;
+                var totalAnswered = 0;
+                document.querySelectorAll(".test-section").forEach(function(section) {
+                    totalQuestions += section.querySelectorAll(".question-container").length;
+                    totalAnswered += section.querySelectorAll("input[type=radio]:checked").length;
+                });
+                var progressPercent = Math.round((totalAnswered / totalQuestions) * 100);
+                document.getElementById("total-progress").textContent = progressPercent;
+                document.getElementById("total-progress-bar").style.width = progressPercent + "%";
+            }
+
             // Monitorear cambios en las respuestas
             document.querySelectorAll("input[type=radio]").forEach(function(input) {
                 input.addEventListener("change", function() {
                     var section = this.closest(".test-section");
                     updateProgress(section);
+                    updateTotalProgress();
                     
                     // Verificar si todas las preguntas están respondidas
                     var allAnswered = true;
@@ -180,6 +194,14 @@ try {
             });
         });
     </script>';
+
+    // Barra de progreso general
+    echo '<div class="progress-bar-container">';
+    echo '<div class="progress-bar-outer">';
+    echo '<div class="progress-bar-inner" id="total-progress-bar"></div>';
+    echo '</div>';
+    echo '<div class="progress-text">Progreso total: <span id="total-progress">0</span>%</div>';
+    echo '</div>';
 
     // Contenedor principal con grid
     echo '<div class="personality-test-container">';

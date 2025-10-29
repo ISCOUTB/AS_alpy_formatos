@@ -44,6 +44,63 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+/* Estilos para las opciones de radio */
+.question-options {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    flex: 1;
+    display: block;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.radio-option:hover {
+    border-color: #05a0a0;
+    background-color: #f2f9f9;
+}
+
+.radio-option input[type="radio"] {
+    display: none;
+}
+
+#page-blocks-personality_test-view .question-options .radio-option {
+    display: block !important;
+    margin: 10px 0 !important;
+    padding: 10px !important;
+    border: 1px solid #c5e5e5 !important;
+    border-radius: 6px !important;
+    transition: all 0.3s ease !important;
+    background-color: #ffffff !important;
+}
+
+#page-blocks-personality_test-view .question-options .radio-option:hover {
+    background-color: #f8fbfb !important;
+}
+
+#page-blocks-personality_test-view .question-options .radio-option input[type="radio"]:checked + span,
+#page-blocks-personality_test-view .question-options .radio-option input[type="radio"]:checked {
+    color: #038383 !important;
+}
+
+#page-blocks-personality_test-view .question-options .radio-option input[type="radio"]:checked {
+    border-color: #05a0a0 !important;
+}
+
+#page-blocks-personality_test-view .question-options .radio-option:has(input[type="radio"]:checked) {
+    background-color: #e8f5f5 !important;
+    border-color: #05a0a0 !important;
+    color: #038383 !important;
+    box-shadow: 0 3px 6px rgba(5, 160, 160, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
 .navigation-buttons.top-buttons {
     border-bottom: 1px solid #e0e0e0;
     margin: 0 0 1.5rem 0;
@@ -54,28 +111,33 @@
     margin-top: 0.5rem;
 }
 
-.section-title {
+#page-blocks-personality_test-view .section-title {
     margin-top: 0;
     margin-bottom: 1.5rem;
+    color: #038383 !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #05a0a0;
+    padding-bottom: 0.5rem;
 }
 
 /* Barra lateral de navegación */
 .section-navigation {
-    background-color: #f8f9fa;
+    background-color: #f2f9f9;
     border-radius: 8px;
     padding: 1rem;
     position: sticky;
     top: 20px;
     height: fit-content;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(5, 160, 160, 0.1);
 }
 
 .section-navigation-header {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #1a73e8;
+    color: #05a0a0;
     padding-bottom: 1rem;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #05a0a0;
     margin-bottom: 1rem;
 }
 
@@ -95,7 +157,48 @@
 }
 
 .section-navigation-item:hover {
-    background-color: #e8f0fe;
+    background-color: #e8f5f5;
+}
+
+.section-navigation-item.active {
+    background-color: #e8f5f5;
+    border-left-color: #05a0a0;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #05a0a0 !important;
+    border-color: #05a0a0 !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: #048686 !important;
+    border-color: #048686 !important;
+}
+
+#page-blocks-personality_test-view .btn.btn-secondary.prev-section {
+    background-color: #e8f5f5 !important;
+    border-color: #05a0a0 !important;
+    color: #038383 !important;
+    transition: all 0.3s ease !important;
+}
+
+#page-blocks-personality_test-view .btn.btn-secondary.prev-section:hover {
+    background-color: #d0eded !important;
+    border-color: #038383 !important;
+    color: #038383 !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-success {
+    background-color: #2e7d32 !important;
+    border-color: #2e7d32 !important;
+}
+
+.btn-success:disabled {
+    background-color: #81c784 !important;
+    border-color: #81c784 !important;
 }
 
 /* Contenedor de preguntas */
@@ -391,6 +494,76 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Barra de progreso general */
+.progress-bar-container {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8fbfb;
+    border-radius: 8px;
+    border: 1px solid #e8f5f5;
+    box-shadow: 0 2px 4px rgba(5, 160, 160, 0.1);
+}
+
+.progress-bar-outer {
+    width: 100%;
+    height: 20px;
+    background-color: #e8f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar-inner {
+    width: 0%;
+    height: 100%;
+    background-color: #05a0a0;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 1rem;
+    color: #038383;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Barra de progreso general */
+.progress-bar-container {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8fbfb;
+    border-radius: 8px;
+    border: 1px solid #e8f5f5;
+    box-shadow: 0 2px 4px rgba(5, 160, 160, 0.1);
+}
+
+.progress-bar-outer {
+    width: 100%;
+    height: 20px;
+    background-color: #e8f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar-inner {
+    width: 0%;
+    height: 100%;
+    background-color: #05a0a0;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    text-align: center;
+    margin-top: 1rem;
+    color: #038383;
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 /* Responsivo */
