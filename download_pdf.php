@@ -3,7 +3,7 @@
 /**
  * Descarga los resultados agregados del test de personalidad en formato PDF para un curso.
  *
- * @package     block_personality_test
+ * @package     block_mbti_93
  * @copyright
  * @license
  */
@@ -31,7 +31,7 @@ require_login($course, false);
 require_capability('moodle/course:viewhiddensections', $context);
 
 // Define el nombre del plugin para usar en get_string
-define('BLOCK_PT_LANG', 'block_personality_test');
+define('BLOCK_PT_LANG', 'block_mbti_93');
 
 // --- OBTENCIÓN Y PROCESAMIENTO DE DATOS ---
 $students = $DB->get_records('personality_test', ['course' => $course->id]);
@@ -98,7 +98,7 @@ class PersonalityReportPDF extends TCPDF {
 
         // --- Inicio: Añadir Logo ---
         $logoname = 'logo_utb.png'; // <-- IMPORTANTE: Cambia esto al nombre exacto de tu archivo de logo
-        $logopath = $CFG->dirroot . '/blocks/personality_test/pix/' . $logoname;
+        $logopath = $CFG->dirroot . '/blocks/mbti_93/pix/' . $logoname;
 
         // Define el tamaño y posición del logo (en mm)
         $logo_width = 25; // Ancho deseado del logo (ajusta según necesites)
@@ -120,7 +120,7 @@ class PersonalityReportPDF extends TCPDF {
         // --- Texto Original del Encabezado ---
         // Centrar el texto del título
         $this->SetFont('helvetica', 'B', 12);
-        $this->Cell(0, 10, $this->reporttitle ?: get_string('pdf_report_title', 'block_personality_test'), 0, true, 'C', 0, '', 0, false, 'T', 'M');
+        $this->Cell(0, 10, $this->reporttitle ?: get_string('pdf_report_title', 'block_mbti_93'), 0, true, 'C', 0, '', 0, false, 'T', 'M');
 
         // Centrar el nombre del curso
         $this->SetFont('helvetica', '', 9);
@@ -137,7 +137,7 @@ class PersonalityReportPDF extends TCPDF {
         $this->SetFont('helvetica', 'I', 8);
         $this->Line(10, $this->GetY(), $this->getPageWidth() - 10, $this->GetY());
         $texto_pie = get_string('page', 'moodle') .' '. $this->getAliasNumPage().'/'.$this->getAliasNbPages();
-        $texto_pie .= ' | ' . get_string('generated_on', 'block_personality_test') . ': ' . userdate(time(), get_string('strftimedatetimeshort', 'langconfig'));
+        $texto_pie .= ' | ' . get_string('generated_on', 'block_mbti_93') . ': ' . userdate(time(), get_string('strftimedatetimeshort', 'langconfig'));
         $this->Cell(0, 10, $texto_pie, 0, false, 'C');
     }
 }
@@ -149,10 +149,10 @@ $pdf = new PersonalityReportPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT,
 
 // Establece metadatos
 $pdf->SetCreator(fullname($USER));
-$pdf->SetAuthor(get_string('pluginname', 'block_personality_test'));
-$report_title_str = get_string('pdf_report_title', 'block_personality_test');
+$pdf->SetAuthor(get_string('pluginname', 'block_mbti_93'));
+$report_title_str = get_string('pdf_report_title', 'block_mbti_93');
 $pdf->SetTitle($report_title_str);
-$pdf->SetSubject(get_string('pdf_report_subject', 'block_personality_test', format_string($course->fullname)));
+$pdf->SetSubject(get_string('pdf_report_subject', 'block_mbti_93', format_string($course->fullname)));
 
 // Pasa datos al encabezado/pie personalizados
 $pdf->setCourseFullName(format_string($course->fullname));
@@ -178,23 +178,23 @@ $pdf->SetFont('helvetica', '', 10);
 
 // Sección Resumen
 $pdf->SetFont('helvetica', 'B', 11);
-$pdf->Cell(0, 10, get_string('summary_information', 'block_personality_test'), 0, 1, 'L');
+$pdf->Cell(0, 10, get_string('summary_information', 'block_mbti_93'), 0, 1, 'L');
 $pdf->SetFont('helvetica', '', 10);
-$pdf->Cell(0, 6, get_string('total_students_processed', 'block_personality_test', $total_students_processed), 0, 1, 'L');
+$pdf->Cell(0, 6, get_string('total_students_processed', 'block_mbti_93', $total_students_processed), 0, 1, 'L');
 $pdf->Ln(5);
 
 // Sección Tabla MBTI
 $pdf->SetFont('helvetica', 'B', 11);
-$pdf->Cell(0, 10, get_string('titulo_distribucion_mbti', 'block_personality_test'), 0, 1, 'L');
+$pdf->Cell(0, 10, get_string('titulo_distribucion_mbti', 'block_mbti_93'), 0, 1, 'L');
 $pdf->SetFont('helvetica', '', 9);
 
 $html_mbti = '<table border="1" cellpadding="4" cellspacing="0">';
 $html_mbti .= '<thead><tr style="background-color:#eeeeee; font-weight:bold;">';
-$html_mbti .= '<th width="25%" align="center">' . get_string('mbti_type', 'block_personality_test') . '</th>';
+$html_mbti .= '<th width="25%" align="center">' . get_string('mbti_type', 'block_mbti_93') . '</th>';
 // Usar 'num_estudiantes_header' consistentemente
-$html_mbti .= '<th width="35%" align="center">' . get_string('num_estudiantes_header', 'block_personality_test') . '</th>';
+$html_mbti .= '<th width="35%" align="center">' . get_string('num_estudiantes_header', 'block_mbti_93') . '</th>';
 // Usar 'percentage' consistentemente
-$html_mbti .= '<th width="40%" align="center">' . get_string('percentage', 'block_personality_test') . '</th>';
+$html_mbti .= '<th width="40%" align="center">' . get_string('percentage', 'block_mbti_93') . '</th>';
 $html_mbti .= '</tr></thead><tbody>';
 
 arsort($mbti_count_filtered);
@@ -216,7 +216,7 @@ $pdf->Ln(8);
 
 // Sección Tablas de Rasgos
 $pdf->SetFont('helvetica', 'B', 11);
-$pdf->Cell(0, 10, get_string('titulo_distribucion_rasgos', 'block_personality_test'), 0, 1, 'L');
+$pdf->Cell(0, 10, get_string('titulo_distribucion_rasgos', 'block_mbti_93'), 0, 1, 'L');
 $pdf->SetFont('helvetica', '', 9);
 
 // Función auxiliar para HTML de tabla de aspecto
@@ -224,14 +224,14 @@ function crearTablaAspectoHTML($titulo_key, $label1_key, $count1, $label2_key, $
     $perc1 = ($total > 0) ? round(($count1 / $total) * 100, 1) : 0;
     $perc2 = ($total > 0) ? round(($count2 / $total) * 100, 1) : 0;
 
-    $titulo = get_string($titulo_key, 'block_personality_test');
-    $label1 = get_string($label1_key, 'block_personality_test');
-    $label2 = get_string($label2_key, 'block_personality_test');
+    $titulo = get_string($titulo_key, 'block_mbti_93');
+    $label1 = get_string($label1_key, 'block_mbti_93');
+    $label2 = get_string($label2_key, 'block_mbti_93');
 
     $table = '<table border="1" cellpadding="3" cellspacing="0">';
     $table .= '<thead><tr style="background-color:#eeeeee; font-weight:bold;"><th colspan="3" align="center">' . $titulo . '</th></tr>';
     // Usar 'percentage' consistentemente
-    $table .= '<tr style="background-color:#f8f8f8;"><th width="40%">' . get_string('trait', 'block_personality_test') . '</th><th width="30%" align="center">' . get_string('count', 'block_personality_test') . '</th><th width="30%" align="right">' . get_string('percentage', BLOCK_PT_LANG) . '</th></tr></thead>';
+    $table .= '<tr style="background-color:#f8f8f8;"><th width="40%">' . get_string('trait', 'block_mbti_93') . '</th><th width="30%" align="center">' . get_string('count', 'block_mbti_93') . '</th><th width="30%" align="right">' . get_string('percentage', BLOCK_PT_LANG) . '</th></tr></thead>';
     $table .= '<tbody>';
     $table .= '<tr><td width="40%">' . $label1 . '</td><td width="30%" align="center">' . $count1 . '</td><td width="30%" align="right">' . number_format($perc1, 1, ',', '.') . '%</td></tr>';
     $table .= '<tr><td width="40%">' . $label2 . '</td><td width="30%" align="center">' . $count2 . '</td><td width="30%" align="right">' . number_format($perc2, 1, ',', '.') . '%</td></tr>';

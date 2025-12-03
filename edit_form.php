@@ -28,21 +28,21 @@
  * @copyright 2009 Tim Hunt
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class block_personality_test_edit_form extends block_edit_form {
+class block_mbti_93_edit_form extends block_edit_form {
     protected function specific_definition($mform) {
         $mform->addElement('header', 'general', get_string('general', 'form'));
-        $mform->addElement('editor', 'config_personality_test_content', get_string('personality_test_content', 'block_personality_test'), null,null );
-        $mform->addRule('config_personality_test_content', null, 'required', null, 'client');
-        $mform->setType('config_personality_test_content', PARAM_RAW); // XSS is prevented when printing the block contents and serving files
+        $mform->addElement('editor', 'config_mbti_93_content', get_string('mbti_93_content', 'block_mbti_93'), null,null );
+        $mform->addRule('config_mbti_93_content', null, 'required', null, 'client');
+        $mform->setType('config_mbti_93_content', PARAM_RAW); // XSS is prevented when printing the block contents and serving files
     }
 
     function set_data($defaults) {
         if (!empty($this->block->config) && is_object($this->block->config)) {
-            if( empty( $this->block->config->personality_test_content ) ){
-                $defaults->config_personality_test_content["text"] =  get_string('code_honor_text', 'block_personality_test');
+            if( empty( $this->block->config->mbti_93_content ) ){
+                $defaults->config_mbti_93_content["text"] =  get_string('code_honor_text', 'block_mbti_93');
             }
         }else{
-            $defaults->config_personality_test_content["text"] =  get_string('code_honor_text', 'block_personality_test');
+            $defaults->config_mbti_93_content["text"] =  get_string('code_honor_text', 'block_mbti_93');
         }
         parent::set_data($defaults);        
     }

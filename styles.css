@@ -1,4 +1,4 @@
-.personality-test-container {
+﻿.personality-test-container {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 2rem;
@@ -70,7 +70,7 @@
     display: none;
 }
 
-#page-blocks-personality_test-view .question-options .radio-option {
+#page-blocks-mbti_93-view .question-options .radio-option {
     display: block !important;
     margin: 10px 0 !important;
     padding: 10px !important;
@@ -80,20 +80,20 @@
     background-color: #ffffff !important;
 }
 
-#page-blocks-personality_test-view .question-options .radio-option:hover {
+#page-blocks-mbti_93-view .question-options .radio-option:hover {
     background-color: #f8fbfb !important;
 }
 
-#page-blocks-personality_test-view .question-options .radio-option input[type="radio"]:checked + span,
-#page-blocks-personality_test-view .question-options .radio-option input[type="radio"]:checked {
+#page-blocks-mbti_93-view .question-options .radio-option input[type="radio"]:checked + span,
+#page-blocks-mbti_93-view .question-options .radio-option input[type="radio"]:checked {
     color: #038383 !important;
 }
 
-#page-blocks-personality_test-view .question-options .radio-option input[type="radio"]:checked {
+#page-blocks-mbti_93-view .question-options .radio-option input[type="radio"]:checked {
     border-color: #05a0a0 !important;
 }
 
-#page-blocks-personality_test-view .question-options .radio-option:has(input[type="radio"]:checked) {
+#page-blocks-mbti_93-view .question-options .radio-option:has(input[type="radio"]:checked) {
     background-color: #e8f5f5 !important;
     border-color: #05a0a0 !important;
     color: #038383 !important;
@@ -111,7 +111,7 @@
     margin-top: 0.5rem;
 }
 
-#page-blocks-personality_test-view .section-title {
+#page-blocks-mbti_93-view .section-title {
     margin-top: 0;
     margin-bottom: 1.5rem;
     color: #038383 !important;
@@ -127,7 +127,7 @@
     border-radius: 8px;
     padding: 1rem;
     position: sticky;
-    top: 20px;
+    top: 120px;
     height: fit-content;
     box-shadow: 0 2px 4px rgba(5, 160, 160, 0.1);
 }
@@ -177,14 +177,14 @@
     border-color: #048686 !important;
 }
 
-#page-blocks-personality_test-view .btn.btn-secondary.prev-section {
+#page-blocks-mbti_93-view .btn.btn-secondary.prev-section {
     background-color: #e8f5f5 !important;
     border-color: #05a0a0 !important;
     color: #038383 !important;
     transition: all 0.3s ease !important;
 }
 
-#page-blocks-personality_test-view .btn.btn-secondary.prev-section:hover {
+#page-blocks-mbti_93-view .btn.btn-secondary.prev-section:hover {
     background-color: #d0eded !important;
     border-color: #038383 !important;
     color: #038383 !important;
@@ -498,41 +498,9 @@
 
 /* Barra de progreso general */
 .progress-bar-container {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #f8fbfb;
-    border-radius: 8px;
-    border: 1px solid #e8f5f5;
-    box-shadow: 0 2px 4px rgba(5, 160, 160, 0.1);
-}
-
-.progress-bar-outer {
-    width: 100%;
-    height: 20px;
-    background-color: #e8f5f5;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.progress-bar-inner {
-    width: 0%;
-    height: 100%;
-    background-color: #05a0a0;
-    transition: width 0.3s ease;
-    border-radius: 10px;
-}
-
-.progress-text {
-    text-align: center;
-    margin-top: 1rem;
-    color: #038383;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-/* Barra de progreso general */
-.progress-bar-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     margin-bottom: 2rem;
     padding: 1.5rem;
     background-color: #f8fbfb;
@@ -613,7 +581,7 @@
 }
 
 /* Mantener los estilos del bloque existente */
-.block_personality_test {
+.block_mbti_93 {
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     border: 1px solid rgba(0, 91, 154, 0.2);
@@ -625,13 +593,13 @@
     margin: 0 auto;
 }
 
-.block_personality_test .header .title {
+.block_mbti_93 .header .title {
     color: #1a73e8;
     font-weight: 600;
 }
 
-.block_personality_test .chart-container,
-#page-blocks-personality_test-view .chart-container {
+.block_mbti_93 .chart-container,
+#page-blocks-mbti_93-view .chart-container {
     margin: 15px 0;
     background-color: #FFFFFF;
     border-radius: 6px;
@@ -641,15 +609,15 @@
     box-sizing: border-box;
 }
 
-.block_personality_test canvas,
-#page-blocks-personality_test-view canvas {
+.block_mbti_93 canvas,
+#page-blocks-mbti_93-view canvas {
     width: 100% !important;
     height: auto !important;
     max-width: 100%;
     display: block;
     margin: 0 auto;
 }
-#page-blocks-personality_test-view .alert {
+#page-blocks-mbti_93-view .alert {
   border-radius: 4px;
   border-color: rgba(0, 91, 154, 0.3);
   background-color: rgba(0, 91, 154, 0.1);
@@ -659,8 +627,8 @@
   box-sizing: border-box;
 }
 
-.block_personality_test .alert-info,
-#page-blocks-personality_test-view .alert-info {
+.block_mbti_93 .alert-info,
+#page-blocks-mbti_93-view .alert-info {
   color: #005B9A;
 }
 
@@ -737,8 +705,8 @@ h2 {
 }
 
 /* Ajustes para botones de descarga */
-.block_personality_test .download-btn,
-#page-blocks-personality_test-view .download-btn {
+.block_mbti_93 .download-btn,
+#page-blocks-mbti_93-view .download-btn {
   width: 100%;
   margin-bottom: 8px;
   font-size: 1em;
@@ -748,7 +716,7 @@ h2 {
 }
 
 /* Ajustes para textos largos */
-.block_personality_test,
-#page-blocks-personality_test-view {
+.block_mbti_93,
+#page-blocks-mbti_93-view {
   word-break: break-word;
 }

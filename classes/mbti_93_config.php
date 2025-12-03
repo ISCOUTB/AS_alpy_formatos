@@ -5,7 +5,7 @@ defined('MOODLE_INTERNAL') || die();
  * Configuración y lógica del test de personalidad MBTI
  * Sistema dinámico para procesar las 93 preguntas del test
  */
-class PersonalityTestConfig {
+class MbtiConfig {
     // Constantes para las secciones
     const SECTION_EI = 1; // Energía y Atención (1-26)
     const SECTION_SN = 2; // Información y Percepción (27-58)

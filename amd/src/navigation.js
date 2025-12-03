@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+﻿define(['jquery'], function($) {
     return {
         init: function() {
             console.log('Inicializando navegación del test...');
@@ -172,7 +172,7 @@ define(['jquery'], function($) {
 
                 if (unanswered.length) {
                     e.preventDefault();
-                    Str.get_string('please_answer_all', 'block_personality_test')
+                    Str.get_string('please_answer_all', 'block_mbti_93')
                         .then(function(message) {
                             Notification.alert('', message);
                             var firstUnansweredSection = $(unanswered[0]).closest('.test-section').attr('id');

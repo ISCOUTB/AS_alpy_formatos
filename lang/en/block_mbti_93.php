@@ -17,9 +17,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 // Plugin strings
-$string['pluginname'] = 'Personality Test';
-$string['personality_test:addinstance'] = 'Add a new personality test block';
-$string['personality_test:myaddinstance'] = 'Add a new personality test block to Dashboard';
+$string['pluginname'] = 'MBTI Test 93';
+$string['mbti_93:addinstance'] = 'Add a new personality test block';
+$string['mbti_93:myaddinstance'] = 'Add a new personality test block to Dashboard';
 
 // Test interface strings
 $string['test_sections'] = 'Test Sections';
@@ -48,8 +48,8 @@ $string['section_progress'] = '{$a->completed}/{$a->total}';
 $string['please_answer_all'] = 'Please answer all questions before proceeding';
 
 // Results and feedback
-$string['personality_test_actived'] = 'Personality test is activated';
-$string['personality_test_configempty'] = 'Personality test is not configured';
+$string['mbti_93_actived'] = 'Personality test is activated';
+$string['mbti_93_configempty'] = 'Personality test is not configured';
 $string['take_test'] = 'Take the test';
 $string['view_results'] = 'View your results';
 $string['error_loading'] = 'Error loading test data';
@@ -203,11 +203,11 @@ $string['section1_q7']  = 'You prefer to do things...';$string['required_message
 
 $string['section1_q7_a'] = 'depending on the impulse of the moment';
 
-$string['section1_q7_b'] = 'depending on what was planned';$string['personality_test_actived'] = 'Personality test activated';// You should have received a copy of the GNU General Public License
+$string['section1_q7_b'] = 'depending on what was planned';$string['mbti_93_actived'] = 'Personality test activated';// You should have received a copy of the GNU General Public License
 
 
 
-$string['section1_q8']  = 'You are...';$string['personality_test_configempty'] = 'Please configure this block';
+$string['section1_q8']  = 'You are...';$string['mbti_93_configempty'] = 'Please configure this block';
 
 $string['section1_q8_a'] = 'a person easy for others to get to know';
 
@@ -227,7 +227,7 @@ $string['section1_q10']  = 'When you have something special to do, you prefer to
 
 $string['section1_q10_a'] = 'organize it carefully before starting';
 
-$string['section1_q10_b'] = 'find out what is necessary as you go along';$string['mbti_distribution_title'] = 'MBTI Distribution';defined('MOODLE_INTERNAL') || die();$string['personality_test_actived'] = 'Personality test activated';$string['personality_test_actived'] = 'Personality test activated';
+$string['section1_q10_b'] = 'find out what is necessary as you go along';$string['mbti_distribution_title'] = 'MBTI Distribution';defined('MOODLE_INTERNAL') || die();$string['mbti_93_actived'] = 'Personality test activated';$string['mbti_93_actived'] = 'Personality test activated';
 
 
 
@@ -243,7 +243,7 @@ $string['section1_q12']  = 'Most people would say you are...';$string['take_test
 
 $string['section1_q12_a'] = 'a reserved person';
 
-$string['section1_q12_b'] = 'an outgoing person';$string['error_loading'] = 'Error loading test status';$string['pluginname'] = 'Personality Test 93';$string['personality_test_configempty'] = 'Please configure this block';$string['personality_test_configempty'] = 'Please configure this block';
+$string['section1_q12_b'] = 'an outgoing person';$string['error_loading'] = 'Error loading test status';$string['pluginname'] = 'Personality Test 93';$string['mbti_93_configempty'] = 'Please configure this block';$string['mbti_93_configempty'] = 'Please configure this block';
 
 
 
@@ -299,7 +299,7 @@ $string['section1_q19']  = 'Being surrounded by people...';$string['type_istp'] 
 
 $string['section1_q19_a'] = 'gives you more energy';
 
-$string['section1_q19_b'] = 'drains your energy';$string['type_isfp'] = 'ISFP: Quiet, friendly, sensitive, and kind';$string['personality_test_actived'] = 'Personality test activated';
+$string['section1_q19_b'] = 'drains your energy';$string['type_isfp'] = 'ISFP: Quiet, friendly, sensitive, and kind';$string['mbti_93_actived'] = 'Personality test activated';
 
 
 
@@ -307,7 +307,7 @@ $string['section1_q20']  = 'You prefer to...';$string['type_infp'] = 'INFP: Idea
 
 $string['section1_q20_a'] = 'organize important dates, birthdays and parties in advance';
 
-$string['section1_q20_b'] = 'be free to dispose of your time';$string['type_intp'] = 'INTP: Seek to develop logical explanations for everything that interests them';$string['personality_test_configempty'] = 'Please configure this block';$string['titulo_distribucion_rasgos'] = 'Personality Traits Distribution';$string["personality_test_content"] = "Content text";
+$string['section1_q20_b'] = 'be free to dispose of your time';$string['type_intp'] = 'INTP: Seek to develop logical explanations for everything that interests them';$string['mbti_93_configempty'] = 'Please configure this block';$string['titulo_distribucion_rasgos'] = 'Personality Traits Distribution';$string["mbti_93_content"] = "Content text";
 
 
 
@@ -339,7 +339,7 @@ $string['section1_q24']  = 'You are more attracted to...';$string['type_enfj'] =
 
 $string['section1_q24_a'] = 'a person with a quick and intelligent mind';
 
-$string['section1_q24_b'] = 'a practical person with common sense';$string['type_entj'] = 'ENTJ: Frank, decisive, assume leadership readily';$string['trait_distribution_title'] = 'Personality Trait Distribution';$string['error_recuperando_resultados'] = 'Error retrieving test results';$string['personality_test:addinstance'] = 'Add a new Personality Test block';
+$string['section1_q24_b'] = 'a practical person with common sense';$string['type_entj'] = 'ENTJ: Frank, decisive, assume leadership readily';$string['trait_distribution_title'] = 'Personality Trait Distribution';$string['error_recuperando_resultados'] = 'Error retrieving test results';$string['mbti_93:addinstance'] = 'Add a new Personality Test block';
 
 
 
@@ -355,7 +355,7 @@ $string['section1_q26']  = 'Generally, other people...';$string['your_type'] = '
 
 $string['section1_q26_a'] = 'take a long time to get to know you';
 
-$string['section1_q26_b'] = 'take a short time to get to know you';$string['type_description'] = 'Type Description:';$string['error_retrieving_results'] = 'Error retrieving test results';$string['personality_test:myaddinstance'] = 'Add a new Personality Test block to My Moodle';
+$string['section1_q26_b'] = 'take a short time to get to know you';$string['type_description'] = 'Type Description:';$string['error_retrieving_results'] = 'Error retrieving test results';$string['mbti_93:myaddinstance'] = 'Add a new Personality Test block to My Moodle';
 
 
 
@@ -387,7 +387,7 @@ $string['section2_q29_a'] = 'Abstract';$string['feeling_score'] = 'Feeling: {$a}
 
 $string['section2_q29_b'] = 'Concrete';
 
-$string['judging_score'] = 'Judging: {$a}%';$string['section1_title'] = 'Which option best matches your way of feeling or acting? Choose the one that mostly represents you.';$string["personality_test:q1"] = "Takes pride in being objective, despite being accused of being cold and indifferent.";
+$string['judging_score'] = 'Judging: {$a}%';$string['section1_title'] = 'Which option best matches your way of feeling or acting? Choose the one that mostly represents you.';$string["mbti_93:q1"] = "Takes pride in being objective, despite being accused of being cold and indifferent.";
 
 $string['section2_q30'] = $string['section2_instruction'];
 
@@ -403,7 +403,7 @@ $string['section2_q31_a'] = 'Thinking';// Additional info strings
 
 $string['section2_q31_b'] = 'Feeling';
 
-$string['trait_description_e'] = 'Extraversion: Focus on the outer world of people and activity';$string['section1_title'] = 'Which alternative is closer to your way of feeling or acting? Choose the one that represents you the most.';$string['section2_title'] = 'Choose the word that best represents you.';$string["personality_test:q1_a"] = "yes.";
+$string['trait_description_e'] = 'Extraversion: Focus on the outer world of people and activity';$string['section1_title'] = 'Which alternative is closer to your way of feeling or acting? Choose the one that represents you the most.';$string['section2_title'] = 'Choose the word that best represents you.';$string["mbti_93:q1_a"] = "yes.";
 
 $string['section2_q32'] = $string['section2_instruction'];
 
@@ -419,7 +419,7 @@ $string['section2_q33_a'] = 'Impulses';$string['trait_description_n'] = 'Intuiti
 
 $string['section2_q33_b'] = 'Decisions';
 
-$string['trait_description_t'] = 'Thinking: Make decisions based on logic and objective analysis';$string['section3_title'] = 'Which option best matches your way of feeling or acting? Choose the one that mostly represents you.';$string["personality_test:q1_b"] = "no.";
+$string['trait_description_t'] = 'Thinking: Make decisions based on logic and objective analysis';$string['section3_title'] = 'Which option best matches your way of feeling or acting? Choose the one that mostly represents you.';$string["mbti_93:q1_b"] = "no.";
 
 $string['section2_q34'] = $string['section2_instruction'];
 
@@ -441,7 +441,7 @@ $string['section2_q36'] = $string['section2_instruction'];$string['section1_q1_a
 
 $string['section2_q36_a'] = 'Systematic';
 
-$string['section2_q36_b'] = 'Casual';$string['section1_q1_b'] = 'Prefer smaller, intimate gatherings';$string["personality_test:q2"] = "Needs to recharge alone, after meetings, phone calls or socializing; the more intense the encounter the more exhausted he feels afterwards.";
+$string['section2_q36_b'] = 'Casual';$string['section1_q1_b'] = 'Prefer smaller, intimate gatherings';$string["mbti_93:q2"] = "Needs to recharge alone, after meetings, phone calls or socializing; the more intense the encounter the more exhausted he feels afterwards.";
 
 
 
@@ -449,7 +449,7 @@ $string['section2_q37'] = $string['section2_instruction'];
 
 $string['section2_q37_a'] = 'Theory';
 
-$string['section2_q37_b'] = 'Certainty';$string['section1_q2'] = 'Where do you prefer to focus your attention?';// Section 1: Questions 1-26$string["personality_test:q2_a"] = "yes.";
+$string['section2_q37_b'] = 'Certainty';$string['section1_q2'] = 'Where do you prefer to focus your attention?';// Section 1: Questions 1-26$string["mbti_93:q2_a"] = "yes.";
 
 
 
@@ -457,7 +457,7 @@ $string['section2_q38'] = $string['section2_instruction'];$string['section1_q2_a
 
 $string['section2_q38_a'] = 'Sensitive';
 
-$string['section2_q38_b'] = 'Fair';$string['section1_q2_b'] = 'Your inner world of ideas and impressions';$string['section1_q1']  = 'When you go somewhere for the day, you prefer...';$string["personality_test:q2_b"] = "no.";
+$string['section2_q38_b'] = 'Fair';$string['section1_q2_b'] = 'Your inner world of ideas and impressions';$string['section1_q1']  = 'When you go somewhere for the day, you prefer...';$string["mbti_93:q2_b"] = "no.";
 
 
 
@@ -473,7 +473,7 @@ $string['section2_q40'] = $string['section2_instruction'];
 
 $string['section2_q40_a'] = 'Facts';
 
-$string['section2_q40_b'] = 'Concepts';// MBTI Type Descriptions$string['section1_q1_b'] = 'to just go and then see what to do';$string["personality_test:q3"] = "He believes that love cannot be defined; he feels offended by those who try to define it.";
+$string['section2_q40_b'] = 'Concepts';// MBTI Type Descriptions$string['section1_q1_b'] = 'to just go and then see what to do';$string["mbti_93:q3"] = "He believes that love cannot be defined; he feels offended by those who try to define it.";
 
 
 
@@ -481,7 +481,7 @@ $string['section2_q41'] = $string['section2_instruction'];$string['type_istj'] =
 
 $string['section2_q41_a'] = 'Free';
 
-$string['section2_q41_b'] = 'Planned';$string['type_isfj'] = 'ISFJ: Quiet, friendly, responsible, and conscientious';$string["personality_test:q3_a"] = "yes.";
+$string['section2_q41_b'] = 'Planned';$string['type_isfj'] = 'ISFJ: Quiet, friendly, responsible, and conscientious';$string["mbti_93:q3_a"] = "yes.";
 
 
 
@@ -489,7 +489,7 @@ $string['section2_q42'] = $string['section2_instruction'];$string['type_infj'] =
 
 $string['section2_q42_a'] = 'Reserved';
 
-$string['section2_q42_b'] = 'Talkative';$string['type_intj'] = 'INTJ: Have original minds and great drive for implementing their ideas';$string['section1_q2']  = 'You consider yourself a person who is...';$string["personality_test:q3_b"] = "no.";
+$string['section2_q42_b'] = 'Talkative';$string['type_intj'] = 'INTJ: Have original minds and great drive for implementing their ideas';$string['section1_q2']  = 'You consider yourself a person who is...';$string["mbti_93:q3_b"] = "no.";
 
 
 
@@ -505,7 +505,7 @@ $string['section2_q44'] = $string['section2_instruction'];$string['type_infp'] =
 
 $string['section2_q44_a'] = 'Benefits';
 
-$string['section2_q44_b'] = 'Blessings';$string['type_intp'] = 'INTP: Seek to develop logical explanations for everything that interests them';$string['section1_q2_b'] = 'more organized';$string["personality_test:q4"] = "Does not mind making difficult decisions and does not understand why some people get upset about things that are not relevant to the issue at hand.";
+$string['section2_q44_b'] = 'Blessings';$string['type_intp'] = 'INTP: Seek to develop logical explanations for everything that interests them';$string['section1_q2_b'] = 'more organized';$string["mbti_93:q4"] = "Does not mind making difficult decisions and does not understand why some people get upset about things that are not relevant to the issue at hand.";
 
 
 
@@ -513,7 +513,7 @@ $string['section2_q44_b'] = 'Blessings';$string['type_intp'] = 'INTP: Seek to de
 
 $string['your_type'] = 'Your personality type is:';
 
-$string['type_description'] = 'Type Description:';$string['type_esfp'] = 'ESFP: Outgoing, friendly, and accepting';$string["personality_test:q4_a"] = "yes.";
+$string['type_description'] = 'Type Description:';$string['type_esfp'] = 'ESFP: Outgoing, friendly, and accepting';$string["mbti_93:q4_a"] = "yes.";
 
 $string['traits_distribution'] = 'Trait Distribution:';
 
@@ -521,7 +521,7 @@ $string['extraversion_score'] = 'Extraversion: {$a}%';$string['type_enfp'] = 'EN
 
 $string['introversion_score'] = 'Introversion: {$a}%';
 
-$string['sensing_score'] = 'Sensing: {$a}%';$string['type_entp'] = 'ENTP: Quick, ingenious, stimulating, alert, and outspoken';$string['section1_q3']  = 'If you were a teacher, you would prefer...';$string["personality_test:q4_b"] = "no.";
+$string['sensing_score'] = 'Sensing: {$a}%';$string['type_entp'] = 'ENTP: Quick, ingenious, stimulating, alert, and outspoken';$string['section1_q3']  = 'If you were a teacher, you would prefer...';$string["mbti_93:q4_b"] = "no.";
 
 $string['intuition_score'] = 'Intuition: {$a}%';
 
@@ -537,7 +537,7 @@ $string['type_enfj'] = 'ENFJ: Warm, empathetic, responsive, and responsible';
 
 // MBTI Type Descriptions
 
-$string['type_istj'] = 'ISTJ: Quiet, serious, earn success by thoroughness and dependability';$string['type_entj'] = 'ENTJ: Frank, decisive, assume leadership readily';$string['section1_q3_b'] = 'to carry out theoretical classes';$string["personality_test:q5"] = "Tends to talk first and think later; often berates himself with things like 'Will I ever learn to keep my mouth shut?'";
+$string['type_istj'] = 'ISTJ: Quiet, serious, earn success by thoroughness and dependability';$string['type_entj'] = 'ENTJ: Frank, decisive, assume leadership readily';$string['section1_q3_b'] = 'to carry out theoretical classes';$string["mbti_93:q5"] = "Tends to talk first and think later; often berates himself with things like 'Will I ever learn to keep my mouth shut?'";
 
 $string['type_isfj'] = 'ISFJ: Quiet, friendly, responsible, and conscientious';
 
@@ -545,7 +545,7 @@ $string['type_infj'] = 'INFJ: Seek meaning and connection in ideas, relationship
 
 $string['type_intj'] = 'INTJ: Have original minds and great drive for implementing their ideas';
 
-$string['type_istp'] = 'ISTP: Tolerant and flexible, quiet observers until a problem appears';// Result page strings$string["personality_test:q5_a"] = "yes.";
+$string['type_istp'] = 'ISTP: Tolerant and flexible, quiet observers until a problem appears';// Result page strings$string["mbti_93:q5_a"] = "yes.";
 
 $string['type_isfp'] = 'ISFP: Quiet, friendly, sensitive, and kind';
 
@@ -553,7 +553,7 @@ $string['type_infp'] = 'INFP: Idealistic, loyal to their values and to people wh
 
 $string['type_intp'] = 'INTP: Seek to develop logical explanations for everything that interests them';
 
-$string['type_estp'] = 'ESTP: Flexible and tolerant, take a pragmatic approach focused on immediate results';$string['type_description'] = 'Type Description:';$string['section1_q4']  = 'Usually you are...';$string["personality_test:q5_b"] = "no.";
+$string['type_estp'] = 'ESTP: Flexible and tolerant, take a pragmatic approach focused on immediate results';$string['type_description'] = 'Type Description:';$string['section1_q4']  = 'Usually you are...';$string["mbti_93:q5_b"] = "no.";
 
 $string['type_esfp'] = 'ESFP: Outgoing, friendly, and accepting';
 
@@ -568,544 +568,544 @@ $string['type_esfj'] = 'ESFJ: Warmhearted, conscientious, and cooperative';
 $string['type_enfj'] = 'ENFJ: Warm, empathetic, responsive, and responsible';$string['introversion_score'] = 'Introversion: {$a}%';
 
 $string['type_entj'] = 'ENTJ: Frank, decisive, assume leadership readily';
-$string['sensing_score'] = 'Sensing: {$a}%';$string['section1_q4_b'] = 'quiet and reserved';$string["personality_test:q6"] = "Remembers numbers and figures more easily than faces and names..";
+$string['sensing_score'] = 'Sensing: {$a}%';$string['section1_q4_b'] = 'quiet and reserved';$string["mbti_93:q6"] = "Remembers numbers and figures more easily than faces and names..";
 
 $string['intuition_score'] = 'Intuition: {$a}%';
 
-$string['thinking_score'] = 'Thinking: {$a}%';$string["personality_test:q6_a"] = "yes.";
+$string['thinking_score'] = 'Thinking: {$a}%';$string["mbti_93:q6_a"] = "yes.";
 
 $string['feeling_score'] = 'Feeling: {$a}%';
 
-$string['judging_score'] = 'Judging: {$a}%';$string['section1_q5']  = 'You usually get along better with people who are';$string["personality_test:q6_b"] = "no.";
+$string['judging_score'] = 'Judging: {$a}%';$string['section1_q5']  = 'You usually get along better with people who are';$string["mbti_93:q6_b"] = "no.";
 
 $string['perceiving_score'] = 'Perceiving: {$a}%';
 $string['section1_q5_a'] = 'imaginative';
 
-$string['section1_q5_b'] = 'realistic';$string["personality_test:q7"] = "Knows many people and considers many of them close friends; likes to include as many people as possible in his activities. 	";
+$string['section1_q5_b'] = 'realistic';$string["mbti_93:q7"] = "Knows many people and considers many of them close friends; likes to include as many people as possible in his activities. 	";
 
-$string["personality_test:q7_a"] = "yes.";
+$string["mbti_93:q7_a"] = "yes.";
 
-$string['section1_q6']  = 'You prefer...';$string["personality_test:q7_b"] = "no.";
+$string['section1_q6']  = 'You prefer...';$string["mbti_93:q7_b"] = "no.";
 
 $string['section1_q6_a'] = 'your heart to dominate your head';
 
-$string['section1_q6_b'] = 'your head to dominate your heart';$string["personality_test:q8"] = "Considers it a good decision to take into account the feelings of others.";
+$string['section1_q6_b'] = 'your head to dominate your heart';$string["mbti_93:q8"] = "Considers it a good decision to take into account the feelings of others.";
 
-$string["personality_test:q8_a"] = "yes.";
+$string["mbti_93:q8_a"] = "yes.";
 
-$string['section1_q7']  = 'You prefer to do things...';$string["personality_test:q8_b"] = "no.";
+$string['section1_q7']  = 'You prefer to do things...';$string["mbti_93:q8_b"] = "no.";
 
 $string['section1_q7_a'] = 'depending on the impulse of the moment';
 
-$string['section1_q7_b'] = 'depending on what was planned';$string["personality_test:q9"] = "Rehearses things before saying them; often replies with 'I'll have to think about it or I'll get back to you later.' ";
+$string['section1_q7_b'] = 'depending on what was planned';$string["mbti_93:q9"] = "Rehearses things before saying them; often replies with 'I'll have to think about it or I'll get back to you later.' ";
 
-$string["personality_test:q9_a"] = "yes.";
+$string["mbti_93:q9_a"] = "yes.";
 
-$string['section1_q8']  = 'You are...';$string["personality_test:q9_b"] = "no.";
+$string['section1_q8']  = 'You are...';$string["mbti_93:q9_b"] = "no.";
 
 $string['section1_q8_a'] = 'a person easy to get to know for others';
 
-$string['section1_q8_b'] = 'a person difficult to get to know for others';$string["personality_test:q10"] = "Does not mind reading or having a conversation while another activity is going on (such as a conversation, TV, Radio, etc.); may actually remain indifferent to this distraction.";
+$string['section1_q8_b'] = 'a person difficult to get to know for others';$string["mbti_93:q10"] = "Does not mind reading or having a conversation while another activity is going on (such as a conversation, TV, Radio, etc.); may actually remain indifferent to this distraction.";
 
-$string["personality_test:q10_a"] = "yes.";
+$string["mbti_93:q10_a"] = "yes.";
 
-$string['section1_q9']  = 'Following the schedule...';$string["personality_test:q10_b"] = "no.";
+$string['section1_q9']  = 'Following the schedule...';$string["mbti_93:q10_b"] = "no.";
 
 $string['section1_q9_a'] = 'do you like it?';
 
-$string['section1_q9_b'] = 'does it limit you?';$string["personality_test:q11"] = "You do not hesitate to take back what you have said if you perceive that you have offended someone; as a result you are accused of having no convictions..";
+$string['section1_q9_b'] = 'does it limit you?';$string["mbti_93:q11"] = "You do not hesitate to take back what you have said if you perceive that you have offended someone; as a result you are accused of having no convictions..";
 
-$string["personality_test:q11_a"] = "yes.";
+$string["mbti_93:q11_a"] = "yes.";
 
-$string['section1_q10']  = 'When you have something special to do, you prefer...';$string["personality_test:q11_b"] = "no.";
+$string['section1_q10']  = 'When you have something special to do, you prefer...';$string["mbti_93:q11_b"] = "no.";
 
 $string['section1_q10_a'] = 'to organize it carefully before starting';
 
-$string['section1_q10_b'] = 'to discover what is necessary as you go';$string["personality_test:q12"] = "You do not like to be forced to make decisions; you prefer to keep your options open.";
+$string['section1_q10_b'] = 'to discover what is necessary as you go';$string["mbti_93:q12"] = "You do not like to be forced to make decisions; you prefer to keep your options open.";
 
-$string["personality_test:q12_a"] = "yes.";
+$string["mbti_93:q12_a"] = "yes.";
 
-$string['section1_q11']  = 'Most of the time you prefer...';$string["personality_test:q12_b"] = "no.";
+$string['section1_q11']  = 'Most of the time you prefer...';$string["mbti_93:q12_b"] = "no.";
 
 $string['section1_q11_a'] = 'to go with the flow';
 
-$string['section1_q11_b'] = 'to stick to the plan';$string["personality_test:q13"] = "You are approachable and converse easily with friends, co-workers and strangers, perhaps taking a dominant role in the conversation.";
+$string['section1_q11_b'] = 'to stick to the plan';$string["mbti_93:q13"] = "You are approachable and converse easily with friends, co-workers and strangers, perhaps taking a dominant role in the conversation.";
 
-$string["personality_test:q13_a"] = "yes.";
+$string["mbti_93:q13_a"] = "yes.";
 
-$string['section1_q12']  = 'Most people would say you are...';$string["personality_test:q13_b"] = "no.";
+$string['section1_q12']  = 'Most people would say you are...';$string["mbti_93:q13_b"] = "no.";
 
 $string['section1_q12_a'] = 'a reserved person';
 
-$string['section1_q12_b'] = 'an open person';$string["personality_test:q14"] = "Prefers harmony to clarity; conflict overwhelms him and he tries to avoid it (let's change the subject, or let's shake hands and be friends).";
+$string['section1_q12_b'] = 'an open person';$string["mbti_93:q14"] = "Prefers harmony to clarity; conflict overwhelms him and he tries to avoid it (let's change the subject, or let's shake hands and be friends).";
 
-$string["personality_test:q14_a"] = "yes.";
+$string["mbti_93:q14_a"] = "yes.";
 
-$string['section1_q13']  = 'You prefer to be considered...';$string["personality_test:q14_b"] = "no.";
+$string['section1_q13']  = 'You prefer to be considered...';$string["mbti_93:q14_b"] = "no.";
 
 $string['section1_q13_a'] = 'a practical person';
 
-$string['section1_q13_b'] = 'an ingenious person';$string["personality_test:q15"] = "He gets frustrated when people give him unclear instructions or when someone tells him 'this is the general plan, we'll deal with the details later'.";
+$string['section1_q13_b'] = 'an ingenious person';$string["mbti_93:q15"] = "He gets frustrated when people give him unclear instructions or when someone tells him 'this is the general plan, we'll deal with the details later'.";
 
-$string["personality_test:q15_a"] = "yes.";
+$string["mbti_93:q15_a"] = "yes.";
 
-$string['section1_q14']  = 'In front of a group of people you prefer...';$string["personality_test:q15_b"] = "no.";
+$string['section1_q14']  = 'In front of a group of people you prefer...';$string["mbti_93:q15_b"] = "no.";
 
 $string['section1_q14_a'] = 'to present others';
 
-$string['section1_q14_b'] = 'to be presented';$string["personality_test:q16"] = "In a conversation he often changes the subject; the new topic may be something that comes to mind or that catches his attention at the time.";
+$string['section1_q14_b'] = 'to be presented';$string["mbti_93:q16"] = "In a conversation he often changes the subject; the new topic may be something that comes to mind or that catches his attention at the time.";
 
-$string["personality_test:q16_a"] = "yes.";
+$string["mbti_93:q16_a"] = "yes.";
 
-$string['section1_q15']  = 'You prefer to have friends who...';$string["personality_test:q16_b"] = "no.";
+$string['section1_q15']  = 'You prefer to have friends who...';$string["mbti_93:q16_b"] = "no.";
 
 $string['section1_q15_a'] = 'always have new ideas';
 
-$string['section1_q15_b'] = 'always have both feet on the ground';$string["personality_test:q17"] = "He tends not to make things definitive, though not always. ";
+$string['section1_q15_b'] = 'always have both feet on the ground';$string["mbti_93:q17"] = "He tends not to make things definitive, though not always. ";
 
-$string["personality_test:q17_a"] = "yes.";
+$string["mbti_93:q17_a"] = "yes.";
 
-$string['section1_q16']  = 'You tend to...';$string["personality_test:q17_b"] = "no.";
+$string['section1_q16']  = 'You tend to...';$string["mbti_93:q17_b"] = "no.";
 
 $string['section1_q16_a'] = 'value feelings more than logic';
 
-$string['section1_q16_b'] = 'value logic more than feelings';$string["personality_test:q18"] = "He considers it more important to be right than to be liked; he does not think it is necessary for him to like people in order to work with them and do a good job.";
+$string['section1_q16_b'] = 'value logic more than feelings';$string["mbti_93:q18"] = "He considers it more important to be right than to be liked; he does not think it is necessary for him to like people in order to work with them and do a good job.";
 
-$string["personality_test:q18_a"] = "yes.";
+$string["mbti_93:q18_a"] = "yes.";
 
-$string['section1_q17']  = 'You prefer...';$string["personality_test:q18_b"] = "no.";
+$string['section1_q17']  = 'You prefer...';$string["mbti_93:q18_b"] = "no.";
 
 $string['section1_q17_a'] = 'to wait and see what happens and then make plans';
 
-$string['section1_q17_b'] = 'to plan things as they happen';$string["personality_test:q19"] = "He does not like surprises and lets others know this.";
+$string['section1_q17_b'] = 'to plan things as they happen';$string["mbti_93:q19"] = "He does not like surprises and lets others know this.";
 
-$string["personality_test:q19_a"] = "yes.";
+$string["mbti_93:q19_a"] = "yes.";
 
-$string['section1_q18']  = 'You tend to spend your time...';$string["personality_test:q19_b"] = "no.";
+$string['section1_q18']  = 'You tend to spend your time...';$string["mbti_93:q19_b"] = "no.";
 
 $string['section1_q18_a'] = 'in solitary activities';
 
-$string['section1_q18_b'] = 'in activities with other people';$string["personality_test:q20"] = "Tends to give more credence to things that are logical and scientific; e.g., until he receives more information that justifies the benefits of this test, he will remain skeptical about its usefulness.";
+$string['section1_q18_b'] = 'in activities with other people';$string["mbti_93:q20"] = "Tends to give more credence to things that are logical and scientific; e.g., until he receives more information that justifies the benefits of this test, he will remain skeptical about its usefulness.";
 
-$string["personality_test:q20_a"] = "yes.";
+$string["mbti_93:q20_a"] = "yes.";
 
-$string['section1_q19']  = 'You find that being surrounded by people...';$string["personality_test:q20_b"] = "no.";
+$string['section1_q19']  = 'You find that being surrounded by people...';$string["mbti_93:q20_b"] = "no.";
 
 $string['section1_q19_a'] = 'gives you more energy';
 
-$string['section1_q19_b'] = 'drains your energy';$string["personality_test:q21"] = "Makes lists and uses them; if he does something that is not on his list he may add it to the list just so he can cross it off.";
+$string['section1_q19_b'] = 'drains your energy';$string["mbti_93:q21"] = "Makes lists and uses them; if he does something that is not on his list he may add it to the list just so he can cross it off.";
 
-$string["personality_test:q21_a"] = "yes.";
+$string["mbti_93:q21_a"] = "yes.";
 
-$string['section1_q20']  = 'You prefer...';$string["personality_test:q21_b"] = "no.";
+$string['section1_q20']  = 'You prefer...';$string["mbti_93:q21_b"] = "no.";
 
 $string['section1_q20_a'] = 'to organize important dates, birthdays and parties in advance';
 
-$string['section1_q20_b'] = 'to be free to use your time';$string["personality_test:q22"] = "Turns all work into fun; if a job can't be fun, it's probably not worth doing.";
+$string['section1_q20_b'] = 'to be free to use your time';$string["mbti_93:q22"] = "Turns all work into fun; if a job can't be fun, it's probably not worth doing.";
 
-$string["personality_test:q22_a"] = "yes.";
+$string["mbti_93:q22_a"] = "yes.";
 
-$string['section1_q21']  = 'When you plan a trip, you prefer...';$string["personality_test:q22_b"] = "no.";
+$string['section1_q21']  = 'When you plan a trip, you prefer...';$string["mbti_93:q22_b"] = "no.";
 
 $string['section1_q21_a'] = 'most of the time to do what seems right at the moment';
 
-$string['section1_q21_b'] = 'to plan activities depending on the days you have available';$string["personality_test:q23"] = "Finds listening more difficult than talking; likes to be the star of the conversation, and gets bored when he can't actively participate in it.";
+$string['section1_q21_b'] = 'to plan activities depending on the days you have available';$string["mbti_93:q23"] = "Finds listening more difficult than talking; likes to be the star of the conversation, and gets bored when he can't actively participate in it.";
 
-$string["personality_test:q23_a"] = "yes.";
+$string["mbti_93:q23_a"] = "yes.";
 
-$string['section1_q22']  = 'At a party...';$string["personality_test:q23_b"] = "no.";
+$string['section1_q22']  = 'At a party...';$string["mbti_93:q23_b"] = "no.";
 
 $string['section1_q22_a'] = 'sometimes you get bored';
 
-$string['section1_q22_b'] = 'you always have fun';$string["personality_test:q24"] = "Delights in order; has his special way of keeping things on his desk, in his files, or hanging things on the walls.";
+$string['section1_q22_b'] = 'you always have fun';$string["mbti_93:q24"] = "Delights in order; has his special way of keeping things on his desk, in his files, or hanging things on the walls.";
 
-$string["personality_test:q24_a"] = "si";
+$string["mbti_93:q24_a"] = "si";
 
-$string['section1_q23']  = 'Usually...';$string["personality_test:q24_b"] = "no.";
+$string['section1_q23']  = 'Usually...';$string["mbti_93:q24_b"] = "no.";
 
 $string['section1_q23_a'] = 'you tend to be with other people';
 
-$string['section1_q23_b'] = 'you tend to be alone';$string["personality_test:q25"] = "He prefers to generate ideas in a group rather than on his own; he feels exhausted if he spends too much time thinking without having the opportunity to exchange ideas with others.";
+$string['section1_q23_b'] = 'you tend to be alone';$string["mbti_93:q25"] = "He prefers to generate ideas in a group rather than on his own; he feels exhausted if he spends too much time thinking without having the opportunity to exchange ideas with others.";
 
-$string["personality_test:q25_a"] = "yes.";
+$string["mbti_93:q25_a"] = "yes.";
 
-$string['section1_q24']  = 'You are more attracted to';$string["personality_test:q25_b"] = "no.";
+$string['section1_q24']  = 'You are more attracted to';$string["mbti_93:q25_b"] = "no.";
 
 $string['section1_q24_a'] = 'a person with a quick and intelligent mind';
 
-$string['section1_q24_b'] = 'a practical person with common sense';$string["personality_test:q26"] = "He is often accused of being angry when he is not; it is just his way of expressing his opinion.";
+$string['section1_q24_b'] = 'a practical person with common sense';$string["mbti_93:q26"] = "He is often accused of being angry when he is not; it is just his way of expressing his opinion.";
 
-$string["personality_test:q26_a"] = "yes.";
+$string["mbti_93:q26_a"] = "yes.";
 
-$string['section1_q25']  = 'In your work routine...';$string["personality_test:q26_b"] = "no.";
+$string['section1_q25']  = 'In your work routine...';$string["mbti_93:q26_b"] = "no.";
 
 $string['section1_q25_a'] = 'you like to work against time';
 
-$string['section1_q25_b'] = 'you usually plan your work, so it is not necessary to work under pressure';$string["personality_test:q27"] = "You enjoy providing needed services to people even if some take advantage of you..";
+$string['section1_q25_b'] = 'you usually plan your work, so it is not necessary to work under pressure';$string["mbti_93:q27"] = "You enjoy providing needed services to people even if some take advantage of you..";
 
-$string["personality_test:q27_a"] = "yes.";
+$string["mbti_93:q27_a"] = "yes.";
 
-$string['section1_q26']  = 'Generally for other people...';$string["personality_test:q27_b"] = "no.";
+$string['section1_q26']  = 'Generally for other people...';$string["mbti_93:q27_b"] = "no.";
 
 $string['section1_q26_a'] = 'it takes a long time to get to know you';
 
-$string['section1_q26_b'] = 'it takes little time to get to know you';$string["personality_test:q28"] = "You are easily distracted; you get 'lost' on the way from the street door to the car. ";
+$string['section1_q26_b'] = 'it takes little time to get to know you';$string["mbti_93:q28"] = "You are easily distracted; you get 'lost' on the way from the street door to the car. ";
 
-$string["personality_test:q28_a"] = "yes.";
+$string["mbti_93:q28_a"] = "yes.";
 
-// Section 2: Questions 27-58 (generic prompt + words)$string["personality_test:q28_b"] = "no.";
+// Section 2: Questions 27-58 (generic prompt + words)$string["mbti_93:q28_b"] = "no.";
 
 $string['section2_instruction'] = 'Choose the word that best represents you.';
 
-$string["personality_test:q29"] = "You like to complete a job to completion and get it out of the way even when you know you will have to redo it again later to get it right.";
+$string["mbti_93:q29"] = "You like to complete a job to completion and get it out of the way even when you know you will have to redo it again later to get it right.";
 
-$string['section2_q27'] = $string['section2_instruction'];$string["personality_test:q29_a"] = "yes.";
+$string['section2_q27'] = $string['section2_instruction'];$string["mbti_93:q29_a"] = "yes.";
 
-$string['section2_q27_a'] = 'Closed';$string["personality_test:q29_b"] = "no.";
+$string['section2_q27_a'] = 'Closed';$string["mbti_93:q29_b"] = "no.";
 
 $string['section2_q27_b'] = 'Open';
 
-$string["personality_test:q30"] = "Loves to explore the unknown, even if it's something as simple as the walk home from work.";
+$string["mbti_93:q30"] = "Loves to explore the unknown, even if it's something as simple as the walk home from work.";
 
-$string['section2_q28'] = $string['section2_instruction'];$string["personality_test:q30_a"] = "yes.";
+$string['section2_q28'] = $string['section2_instruction'];$string["mbti_93:q30_a"] = "yes.";
 
-$string['section2_q28_a'] = 'Planned';$string["personality_test:q30_b"] = "no.";
+$string['section2_q28_a'] = 'Planned';$string["mbti_93:q30_b"] = "no.";
 
 $string['section2_q28_b'] = 'Unplanned';
 
-$string["personality_test:q31"] = "You go overboard trying to meet the needs of others; you will do almost anything to accommodate others even at the expense of your own comfort.";
+$string["mbti_93:q31"] = "You go overboard trying to meet the needs of others; you will do almost anything to accommodate others even at the expense of your own comfort.";
 
-$string['section2_q29'] = $string['section2_instruction'];$string["personality_test:q31_a"] = "yes.";
+$string['section2_q29'] = $string['section2_instruction'];$string["mbti_93:q31_a"] = "yes.";
 
-$string['section2_q29_a'] = 'Abstract';$string["personality_test:q31_b"] = "no.";
+$string['section2_q29_a'] = 'Abstract';$string["mbti_93:q31_b"] = "no.";
 
 $string['section2_q29_b'] = 'Concrete';
 
-$string["personality_test:q32"] = "You don't plan a task until you see what is required; people accuse you of being disorganized even though you know best what needs to be done.";
+$string["mbti_93:q32"] = "You don't plan a task until you see what is required; people accuse you of being disorganized even though you know best what needs to be done.";
 
-$string['section2_q30'] = $string['section2_instruction'];$string["personality_test:q32_a"] = "yes.";
+$string['section2_q30'] = $string['section2_instruction'];$string["mbti_93:q32_a"] = "yes.";
 
-$string['section2_q30_a'] = 'Gentle';$string["personality_test:q32_b"] = "no.";
+$string['section2_q30_a'] = 'Gentle';$string["mbti_93:q32_b"] = "no.";
 
 $string['section2_q30_b'] = 'Firm';
 
-$string["personality_test:q33"] = "You put yourself in other people's shoes; you are the one in a meeting who is likely to ask how this will affect the people involved.";
+$string["mbti_93:q33"] = "You put yourself in other people's shoes; you are the one in a meeting who is likely to ask how this will affect the people involved.";
 
-$string['section2_q31'] = $string['section2_instruction'];$string["personality_test:q33_a"] = "yes.";
+$string['section2_q31'] = $string['section2_instruction'];$string["mbti_93:q33_a"] = "yes.";
 
-$string['section2_q31_a'] = 'Thinking';$string["personality_test:q33_b"] = "no.";
+$string['section2_q31_a'] = 'Thinking';$string["mbti_93:q33_b"] = "no.";
 
 $string['section2_q31_b'] = 'Feeling';
 
-$string["personality_test:q34"] = "You have a place for everything and are not satisfied until everything is in place.";
+$string["mbti_93:q34"] = "You have a place for everything and are not satisfied until everything is in place.";
 
-$string['section2_q32'] = $string['section2_instruction'];$string["personality_test:q34_a"] = "yes.";
+$string['section2_q32'] = $string['section2_instruction'];$string["mbti_93:q34_a"] = "yes.";
 
-$string['section2_q32_a'] = 'Facts';$string["personality_test:q34_b"] = "no.";
+$string['section2_q32_a'] = 'Facts';$string["mbti_93:q34_b"] = "no.";
 
 $string['section2_q32_b'] = 'Ideas';
 
-$string["personality_test:q35"] = "You often wonder if anyone cares about what you want even if you have difficulty telling anyone.";
+$string["mbti_93:q35"] = "You often wonder if anyone cares about what you want even if you have difficulty telling anyone.";
 
-$string['section2_q33'] = $string['section2_instruction'];$string["personality_test:q35_a"] = "yes.";
+$string['section2_q33'] = $string['section2_instruction'];$string["mbti_93:q35_a"] = "yes.";
 
-$string['section2_q33_a'] = 'Impulses';$string["personality_test:q35_b"] = "no.";
+$string['section2_q33_a'] = 'Impulses';$string["mbti_93:q35_b"] = "no.";
 
 $string['section2_q33_b'] = 'Decisions';
 
-$string["personality_test:q36"] = "You always have to wait for others, who never seem to be on time";
+$string["mbti_93:q36"] = "You always have to wait for others, who never seem to be on time";
 
-$string['section2_q34'] = $string['section2_instruction'];$string["personality_test:q36_a"] = "yes.";
+$string['section2_q34'] = $string['section2_instruction'];$string["mbti_93:q36_a"] = "yes.";
 
-$string['section2_q34_a'] = 'Heated';$string["personality_test:q36_b"] = "no.";
+$string['section2_q34_a'] = 'Heated';$string["mbti_93:q36_b"] = "no.";
 
 $string['section2_q34_b'] = 'Calm';
 
-$string["personality_test:q37"] = "You think talking about boring details is a waste of time.";
+$string["mbti_93:q37"] = "You think talking about boring details is a waste of time.";
 
-$string['section2_q35'] = $string['section2_instruction'];$string["personality_test:q37_a"] = "si";
+$string['section2_q35'] = $string['section2_instruction'];$string["mbti_93:q37_a"] = "si";
 
-$string['section2_q35_a'] = 'Still';$string["personality_test:q37_b"] = "no";
+$string['section2_q35_a'] = 'Still';$string["mbti_93:q37_b"] = "no";
 
 $string['section2_q35_b'] = 'Reactive';
 
-$string["personality_test:q38"] = "Depends on your adrenaline rush at the last minute to meet your deadlines; usually meets the deadline even if it drives everyone crazy to do it";
+$string["mbti_93:q38"] = "Depends on your adrenaline rush at the last minute to meet your deadlines; usually meets the deadline even if it drives everyone crazy to do it";
 
-$string['section2_q36'] = $string['section2_instruction'];$string["personality_test:q38_a"] = "yes.";
+$string['section2_q36'] = $string['section2_instruction'];$string["mbti_93:q38_a"] = "yes.";
 
-$string['section2_q36_a'] = 'Systematic';$string["personality_test:q38_b"] = "no.";
+$string['section2_q36_a'] = 'Systematic';$string["mbti_93:q38_b"] = "no.";
 
 $string['section2_q36_b'] = 'Casual';
 
-$string["personality_test:q39"] = "Thinks about several things at the same time; often friends and colleagues point out that he is 'kind of absent minded'.";
+$string["mbti_93:q39"] = "Thinks about several things at the same time; often friends and colleagues point out that he is 'kind of absent minded'.";
 
-$string['section2_q37'] = $string['section2_instruction'];$string["personality_test:q39_a"] = "yes.";
+$string['section2_q37'] = $string['section2_instruction'];$string["mbti_93:q39_a"] = "yes.";
 
-$string['section2_q37_a'] = 'Theory';$string["personality_test:q39_b"] = "no.";
+$string['section2_q37_a'] = 'Theory';$string["mbti_93:q39_b"] = "no.";
 
 $string['section2_q37_b'] = 'Certainty';
 
-$string["personality_test:q40"] = "He remembers more easily the face and circumstances in which he met someone than his name.";
+$string["mbti_93:q40"] = "He remembers more easily the face and circumstances in which he met someone than his name.";
 
-$string['section2_q38'] = $string['section2_instruction'];$string["personality_test:q40_a"] = "yes.";
+$string['section2_q38'] = $string['section2_instruction'];$string["mbti_93:q40_a"] = "yes.";
 
-$string['section2_q38_a'] = 'Sensitive';$string["personality_test:q40_b"] = "no.";
+$string['section2_q38_a'] = 'Sensitive';$string["mbti_93:q40_b"] = "no.";
 
 $string['section2_q38_b'] = 'Fair';
 
-$string["personality_test:q41"] = "He finds the future and its possibilities interesting, rather than frightening; he is generally more attracted to where he is going than where he is.";
+$string["mbti_93:q41"] = "He finds the future and its possibilities interesting, rather than frightening; he is generally more attracted to where he is going than where he is.";
 
-$string['section2_q39'] = $string['section2_instruction'];$string["personality_test:q41_a"] = "yes.";
+$string['section2_q39'] = $string['section2_instruction'];$string["mbti_93:q41_a"] = "yes.";
 
-$string['section2_q39_a'] = 'Arguments';$string["personality_test:q41_b"] = "no.";
+$string['section2_q39_a'] = 'Arguments';$string["mbti_93:q41_b"] = "no.";
 
 $string['section2_q39_b'] = 'Facts';
 
-$string["personality_test:q42"] = "You 'know' that if everyone did what they were supposed to do (and at the time they were supposed to do it) the world would be a better place.";
+$string["mbti_93:q42"] = "You 'know' that if everyone did what they were supposed to do (and at the time they were supposed to do it) the world would be a better place.";
 
-$string['section2_q40'] = $string['section2_instruction'];$string["personality_test:q42_a"] = "yes.";
+$string['section2_q40'] = $string['section2_instruction'];$string["mbti_93:q42_a"] = "yes.";
 
-$string['section2_q40_a'] = 'Facts';$string["personality_test:q42_b"] = "no.";
+$string['section2_q40_a'] = 'Facts';$string["mbti_93:q42_b"] = "no.";
 
 $string['section2_q40_b'] = 'Concepts';
 
-$string["personality_test:q43"] = "You believe that you have to see to believe; if someone tells you the mail has arrived, you don't believe it until it's on your desk.";
+$string["mbti_93:q43"] = "You believe that you have to see to believe; if someone tells you the mail has arrived, you don't believe it until it's on your desk.";
 
-$string['section2_q41'] = $string['section2_instruction'];$string["personality_test:q43_a"] = "yes.";
+$string['section2_q41'] = $string['section2_instruction'];$string["mbti_93:q43_a"] = "yes.";
 
-$string['section2_q41_a'] = 'Free';$string["personality_test:q43_b"] = "no.";
+$string['section2_q41_a'] = 'Free';$string["mbti_93:q43_b"] = "no.";
 
 $string['section2_q41_b'] = 'Planned';
 
-$string["personality_test:q44"] = "You believe that time is relative; it doesn't matter what time it is unless the meeting, dinner or event has started without you.";
+$string["mbti_93:q44"] = "You believe that time is relative; it doesn't matter what time it is unless the meeting, dinner or event has started without you.";
 
-$string['section2_q42'] = $string['section2_instruction'];$string["personality_test:q44_a"] = "yes.";
+$string['section2_q42'] = $string['section2_instruction'];$string["mbti_93:q44_a"] = "yes.";
 
-$string['section2_q42_a'] = 'Reserved';$string["personality_test:q44_b"] = "no.";
+$string['section2_q42_a'] = 'Reserved';$string["mbti_93:q44_b"] = "no.";
 
 $string['section2_q42_b'] = 'Talkative';
 
-$string["personality_test:q45"] = "You use words literally; you often find yourself having to ask if they mean what they say or if they are a joke.";
+$string["mbti_93:q45"] = "You use words literally; you often find yourself having to ask if they mean what they say or if they are a joke.";
 
-$string['section2_q43'] = $string['section2_instruction'];$string["personality_test:q45_a"] = "yes.";
+$string['section2_q43'] = $string['section2_instruction'];$string["mbti_93:q45_a"] = "yes.";
 
-$string['section2_q43_a'] = 'Organized';$string["personality_test:q45_b"] = "no.";
+$string['section2_q43_a'] = 'Organized';$string["mbti_93:q45_b"] = "no.";
 
 $string['section2_q43_b'] = 'Disorganized';
 
-$string["personality_test:q46"] = "You wake up in the morning and know pretty well what your day will be like; you have an agenda and follow it; you can get upset if things don't go as planned.";
+$string["mbti_93:q46"] = "You wake up in the morning and know pretty well what your day will be like; you have an agenda and follow it; you can get upset if things don't go as planned.";
 
-$string['section2_q44'] = $string['section2_instruction'];$string["personality_test:q46_a"] = "yes.";
+$string['section2_q44'] = $string['section2_instruction'];$string["mbti_93:q46_a"] = "yes.";
 
-$string['section2_q44_a'] = 'Ideas';$string["personality_test:q46_b"] = "no.";
+$string['section2_q44_a'] = 'Ideas';$string["mbti_93:q46_b"] = "no.";
 
 $string['section2_q44_b'] = 'Facts';
 
-$string["personality_test:q47"] = "Interested in knowing how things work just for the fun of it.";
+$string["mbti_93:q47"] = "Interested in knowing how things work just for the fun of it.";
 
-$string['section2_q45'] = $string['section2_instruction'];$string["personality_test:q47_a"] = "yes.";
+$string['section2_q45'] = $string['section2_instruction'];$string["mbti_93:q47_a"] = "yes.";
 
-$string['section2_q45_a'] = 'Compassionate';$string["personality_test:q47_b"] = "no.";
+$string['section2_q45_a'] = 'Compassionate';$string["mbti_93:q47_b"] = "no.";
 
 $string['section2_q45_b'] = 'Foresightful';
 
-$string["personality_test:q48"] = "You like to demonstrate your point of view for the sake of clarity; it is common for you to discuss both points of view in a debate simply to broaden your intellectual horizon.";
+$string["mbti_93:q48"] = "You like to demonstrate your point of view for the sake of clarity; it is common for you to discuss both points of view in a debate simply to broaden your intellectual horizon.";
 
-$string['section2_q46'] = $string['section2_instruction'];$string["personality_test:q48_a"] = "yes.";
+$string['section2_q46'] = $string['section2_instruction'];$string["mbti_93:q48_a"] = "yes.";
 
-$string['section2_q46_a'] = 'Benefits';$string["personality_test:q48_b"] = "no.";
+$string['section2_q46_a'] = 'Benefits';$string["mbti_93:q48_b"] = "no.";
 
 $string['section2_q46_b'] = 'Blessings';
 
-$string["personality_test:q49"] = "You like to express your thoughts or ideas without interruption; you let others do the same, hoping it will be reciprocated.";
+$string["mbti_93:q49"] = "You like to express your thoughts or ideas without interruption; you let others do the same, hoping it will be reciprocated.";
 
-$string['section2_q47'] = $string['section2_instruction'];$string["personality_test:q49_a"] = "yes.";
+$string['section2_q47'] = $string['section2_instruction'];$string["mbti_93:q49_a"] = "yes.";
 
-$string['section2_q47_a'] = 'Common sense';$string["personality_test:q49_b"] = "no.";
+$string['section2_q47_a'] = 'Common sense';$string["mbti_93:q49_b"] = "no.";
 
 $string['section2_q47_b'] = 'Theoretical';
 
-$string["personality_test:q50"] = "You are able to remain cool, calm and objective in situations where everyone is upset. ";
+$string["mbti_93:q50"] = "You are able to remain cool, calm and objective in situations where everyone is upset. ";
 
-$string['section2_q48'] = $string['section2_instruction'];$string["personality_test:q50_a"] = "yes.";
+$string['section2_q48'] = $string['section2_instruction'];$string["mbti_93:q50_a"] = "yes.";
 
-$string['section2_q48_a'] = 'Few friends';$string["personality_test:q50_b"] = "no.";
+$string['section2_q48_a'] = 'Few friends';$string["mbti_93:q50_b"] = "no.";
 
 $string['section2_q48_b'] = 'Many friends';
 
-$string["personality_test:q51"] = "Finds it easier to see the trees than the forest; is happy to concentrate on his or her work and does not worry about how it fits into the larger scheme of things.";
+$string["mbti_93:q51"] = "Finds it easier to see the trees than the forest; is happy to concentrate on his or her work and does not worry about how it fits into the larger scheme of things.";
 
-$string['section2_q49'] = $string['section2_instruction'];$string["personality_test:q51_a"] = "yes.";
+$string['section2_q49'] = $string['section2_instruction'];$string["mbti_93:q51_a"] = "yes.";
 
-$string['section2_q49_a'] = 'Systematic';$string["personality_test:q51_b"] = "nol.";
+$string['section2_q49_a'] = 'Systematic';$string["mbti_93:q51_b"] = "nol.";
 
 $string['section2_q49_b'] = 'Spontaneous';
 
-$string["personality_test:q52"] = "Has a penchant for banter and puns.";
+$string["mbti_93:q52"] = "Has a penchant for banter and puns.";
 
-$string['section2_q50'] = $string['section2_instruction'];$string["personality_test:q52_a"] = "yes.";
+$string['section2_q50'] = $string['section2_instruction'];$string["mbti_93:q52_a"] = "yes.";
 
-$string['section2_q50_a'] = 'Imaginative';$string["personality_test:q52_b"] = "no.";
+$string['section2_q50_a'] = 'Imaginative';$string["mbti_93:q52_b"] = "no.";
 
 $string['section2_q50_b'] = 'Concrete';
 
-$string["personality_test:q53"] = "Finds work that produces tangible results more satisfying; would rather clean his desk than think about what the future holds for his career.";
+$string["mbti_93:q53"] = "Finds work that produces tangible results more satisfying; would rather clean his desk than think about what the future holds for his career.";
 
-$string['section2_q51'] = $string['section2_instruction'];$string["personality_test:q53_a"] = "yes.";
+$string['section2_q51'] = $string['section2_instruction'];$string["mbti_93:q53_a"] = "yes.";
 
-$string['section2_q51_a'] = 'Warm';$string["personality_test:q53_b"] = "no.";
+$string['section2_q51_a'] = 'Warm';$string["mbti_93:q53_b"] = "no.";
 
 $string['section2_q51_b'] = 'Objective';
 
-$string["personality_test:q54"] = "You wish you could impose your ideas more forcefully. You resent it when others say things you were about to say first.";
+$string["mbti_93:q54"] = "You wish you could impose your ideas more forcefully. You resent it when others say things you were about to say first.";
 
-$string['section2_q52'] = $string['section2_instruction'];$string["personality_test:q54_a"] = "yes.";
+$string['section2_q52'] = $string['section2_instruction'];$string["mbti_93:q54_a"] = "yes.";
 
-$string['section2_q52_a'] = 'Objective';$string["personality_test:q54_b"] = "no.";
+$string['section2_q52_a'] = 'Objective';$string["mbti_93:q54_b"] = "no.";
 
 $string['section2_q52_b'] = 'Passionate';
 
-$string["personality_test:q55"] = "You would rather settle a dispute based on what is fair and true than on what makes people happy.";
+$string["mbti_93:q55"] = "You would rather settle a dispute based on what is fair and true than on what makes people happy.";
 
-$string['section2_q53'] = $string['section2_instruction'];$string["personality_test:q55_a"] = "yes.";
+$string['section2_q53'] = $string['section2_instruction'];$string["mbti_93:q55_a"] = "yes.";
 
-$string['section2_q53_a'] = 'Build';$string["personality_test:q55_b"] = "no.";
+$string['section2_q53_a'] = 'Build';$string["mbti_93:q55_b"] = "no.";
 
 $string['section2_q53_b'] = 'Invent';
 
-$string["personality_test:q56"] = "You prefer specific answers to specific questions; when you ask for the time, you prefer to be told 3:42, not that it's a little before 4 or that it's time to go out.";
+$string["mbti_93:q56"] = "You prefer specific answers to specific questions; when you ask for the time, you prefer to be told 3:42, not that it's a little before 4 or that it's time to go out.";
 
-$string['section2_q54'] = $string['section2_instruction'];$string["personality_test:q56_a"] = "yes.";
+$string['section2_q54'] = $string['section2_instruction'];$string["mbti_93:q56_a"] = "yes.";
 
-$string['section2_q54_a'] = 'Calm';$string["personality_test:q56_b"] = "no.";
+$string['section2_q54_a'] = 'Calm';$string["mbti_93:q56_b"] = "no.";
 
 $string['section2_q54_b'] = 'Sociable';
 
-$string["personality_test:q57"] = "He prefers to fantasize about how to spend his next paycheck than to sit and balance his bank account.";
+$string["mbti_93:q57"] = "He prefers to fantasize about how to spend his next paycheck than to sit and balance his bank account.";
 
-$string['section2_q55'] = $string['section2_instruction'];$string["personality_test:q57_a"] = "yes.";
+$string['section2_q55'] = $string['section2_instruction'];$string["mbti_93:q57_a"] = "yes.";
 
-$string['section2_q55_a'] = 'Theories';$string["personality_test:q57_b"] = "no.";
+$string['section2_q55_a'] = 'Theories';$string["mbti_93:q57_b"] = "no.";
 
 $string['section2_q55_b'] = 'Facts';
 
-$string["personality_test:q58"] = "You are a strong-minded person rather than a tender-hearted one; if you disagree with people, you would rather say so than keep quiet and let them think you agree.";
+$string["mbti_93:q58"] = "You are a strong-minded person rather than a tender-hearted one; if you disagree with people, you would rather say so than keep quiet and let them think you agree.";
 
-$string['section2_q56'] = $string['section2_instruction'];$string["personality_test:q58_a"] = "yes.";
+$string['section2_q56'] = $string['section2_instruction'];$string["mbti_93:q58_a"] = "yes.";
 
-$string['section2_q56_a'] = 'Compassionate';$string["personality_test:q58_b"] = "no.";
+$string['section2_q56_a'] = 'Compassionate';$string["mbti_93:q58_b"] = "no.";
 
 $string['section2_q56_b'] = 'Logical';
 
-$string["personality_test:q59"] = "You like to concentrate on what you are doing at the moment and generally do not care about what comes next; in fact, you would rather do something than think about it.";
+$string["mbti_93:q59"] = "You like to concentrate on what you are doing at the moment and generally do not care about what comes next; in fact, you would rather do something than think about it.";
 
-$string['section2_q57'] = $string['section2_instruction'];$string["personality_test:q59_a"] = "yes.";
+$string['section2_q57'] = $string['section2_instruction'];$string["mbti_93:q59_a"] = "yes.";
 
-$string['section2_q57_a'] = 'Analytical';$string["personality_test:q59_b"] = "no.";
+$string['section2_q57_a'] = 'Analytical';$string["mbti_93:q59_b"] = "no.";
 
 $string['section2_q57_b'] = 'Sentimental';
 
-$string["personality_test:q60"] = "He does not believe that neatness is important, although he would prefer to have things in order; what is important is creativity, spontaneity and responsiveness.";
+$string["mbti_93:q60"] = "He does not believe that neatness is important, although he would prefer to have things in order; what is important is creativity, spontaneity and responsiveness.";
 
-$string['section2_q58'] = $string['section2_instruction'];$string["personality_test:q60_a"] = "yes.";
+$string['section2_q58'] = $string['section2_instruction'];$string["mbti_93:q60_a"] = "yes.";
 
-$string['section2_q58_a'] = 'Sensitive';$string["personality_test:q60_b"] = "no.";
+$string['section2_q58_a'] = 'Sensitive';$string["mbti_93:q60_b"] = "no.";
 
 $string['section2_q58_b'] = 'Impressionable';
 
-$string["personality_test:q61"] = "You need approval from senior colleagues and subordinates about who you are, what you do, how you look, and just about everything else; you may think you do a good job but until you hear someone tell you so, you won't really believe it.";
+$string["mbti_93:q61"] = "You need approval from senior colleagues and subordinates about who you are, what you do, how you look, and just about everything else; you may think you do a good job but until you hear someone tell you so, you won't really believe it.";
 
-// Section 3: Questions 59-75$string["personality_test:q61_a"] = "yes.";
+// Section 3: Questions 59-75$string["mbti_93:q61_a"] = "yes.";
 
-$string['section3_q59']  = 'When you start a big project to develop in one week';$string["personality_test:q61_b"] = "no.";
+$string['section3_q59']  = 'When you start a big project to develop in one week';$string["mbti_93:q61_b"] = "no.";
 
 $string['section3_q59_a'] = 'you make a list of things to do by order of importance';
 
-$string['section3_q59_b'] = 'you dive into the subject';$string["personality_test:q62"] = "You find it more attractive to look for the underlying relationships and connections to things, rather than accepting them as they appear; you are always asking what that means.";
+$string['section3_q59_b'] = 'you dive into the subject';$string["mbti_93:q62"] = "You find it more attractive to look for the underlying relationships and connections to things, rather than accepting them as they appear; you are always asking what that means.";
 
-$string["personality_test:q62_a"] = "yes.";
+$string["mbti_93:q62_a"] = "yes.";
 
-$string['section3_q60']  = 'In social situations you find...';$string["personality_test:q62_b"] = "no.";
+$string['section3_q60']  = 'In social situations you find...';$string["mbti_93:q62_b"] = "no.";
 
 $string['section3_q60_a'] = 'difficult to start and maintain a conversation with a stranger';
 
-$string['section3_q60_b'] = 'easy to talk at length with most people';$string["personality_test:q63"] = "You may believe that those who talk a lot are charlatans; when you hear others talking it may come to your mind that they are wasting their time.";
+$string['section3_q60_b'] = 'easy to talk at length with most people';$string["mbti_93:q63"] = "You may believe that those who talk a lot are charlatans; when you hear others talking it may come to your mind that they are wasting their time.";
 
-$string["personality_test:q63_a"] = "yes.";
+$string["mbti_93:q63_a"] = "yes.";
 
-$string['section3_q61']  = 'When you do things most people do, you prefer...';$string["personality_test:q63_b"] = "no.";     
+$string['section3_q61']  = 'When you do things most people do, you prefer...';$string["mbti_93:q63_b"] = "no.";     
 
 $string['section3_q61_a'] = 'to do it the conventional way';
 
-$string['section3_q61_b'] = 'to invent your own style';$string["personality_test:q64"] = "You tend to give general answers to questions; you don't understand why so many people can't follow your instructions and get irritated when people press you for specifics.";
+$string['section3_q61_b'] = 'to invent your own style';$string["mbti_93:q64"] = "You tend to give general answers to questions; you don't understand why so many people can't follow your instructions and get irritated when people press you for specifics.";
 
-$string["personality_test:q64_a"] = "yes.";
+$string["mbti_93:q64_a"] = "yes.";
 
-$string['section3_q62']  = 'People who have recently met you can say what kind of person you are...';$string["personality_test:q64_b"] = "no.";
+$string['section3_q62']  = 'People who have recently met you can say what kind of person you are...';$string["mbti_93:q64_b"] = "no.";
 
 $string['section3_q62_a'] = 'quickly';
 
-$string['section3_q62_b'] = 'only after they really know you';$string["personality_test:q65"] = "Is perceived as a great listener but feels that others take advantage of this and take advantage.";
+$string['section3_q62_b'] = 'only after they really know you';$string["mbti_93:q65"] = "Is perceived as a great listener but feels that others take advantage of this and take advantage.";
 
-$string["personality_test:q65_a"] = "yes.";
+$string["mbti_93:q65_a"] = "yes.";
 
-$string['section3_q63']  = 'You prefer subjects that deal with...';$string["personality_test:q65_b"] = "no.";
+$string['section3_q63']  = 'You prefer subjects that deal with...';$string["mbti_93:q65_b"] = "no.";
 
 $string['section3_q63_a'] = 'concepts and principles';
 
-$string['section3_q63_b'] = 'facts and examples';$string["personality_test:q66"] = "He thinks fantasy is a bad word; he is doubtful of people who seem to spend too much time playing with their imagination.";
+$string['section3_q63_b'] = 'facts and examples';$string["mbti_93:q66"] = "He thinks fantasy is a bad word; he is doubtful of people who seem to spend too much time playing with their imagination.";
 
-$string["personality_test:q66_a"] = "yes.";
+$string["mbti_93:q66_a"] = "yes.";
 
-$string['section3_q64']  = 'It is a compliment to be called...';$string["personality_test:q66_b"] = "no.";
+$string['section3_q64']  = 'It is a compliment to be called...';$string["mbti_93:q66_b"] = "no.";
 
 $string['section3_q64_a'] = 'a person with real feelings';
 
-$string['section3_q64_b'] = 'a consistent and reasonable person';$string["personality_test:q67"] = "He has sometimes been called shy; whether he agrees or not, he can come across to others as reserved and thoughtful.";
+$string['section3_q64_b'] = 'a consistent and reasonable person';$string["mbti_93:q67"] = "He has sometimes been called shy; whether he agrees or not, he can come across to others as reserved and thoughtful.";
 
-$string["personality_test:q67_a"] = "yes.";
+$string["mbti_93:q67_a"] = "yes.";
 
-$string['section3_q65']  = 'You find keeping an agenda...';$string["personality_test:q67_b"] = "no.";
+$string['section3_q65']  = 'You find keeping an agenda...';$string["mbti_93:q67_b"] = "no.";
 
 $string['section3_q65_a'] = 'necessary sometimes, but most of the time not';
 
-$string['section3_q65_b'] = 'favorable and useful most of the time';$string["personality_test:q68"] = "He considers phone calls to be welcome interruptions; he doesn't hesitate to use the phone when he has something to say or needs to see someone.";
+$string['section3_q65_b'] = 'favorable and useful most of the time';$string["mbti_93:q68"] = "He considers phone calls to be welcome interruptions; he doesn't hesitate to use the phone when he has something to say or needs to see someone.";
 
-$string["personality_test:q68_a"] = "yes.";
+$string["mbti_93:q68_a"] = "yes.";
 
-$string['section3_q66']  = 'When you are with a group of people you prefer...';$string["personality_test:q68_b"] = "no.";
+$string['section3_q66']  = 'When you are with a group of people you prefer...';$string["mbti_93:q68_b"] = "no.";
 
 $string['section3_q66_a'] = 'to talk with those people you know well';
 
-$string['section3_q66_b'] = 'to enjoy the group discussion';$string["personality_test:q69"] = "Likes to share special occasions with only one other person or perhaps a few close friends.";
+$string['section3_q66_b'] = 'to enjoy the group discussion';$string["mbti_93:q69"] = "Likes to share special occasions with only one other person or perhaps a few close friends.";
 
-$string["personality_test:q69_a"] = "yes.";
+$string["mbti_93:q69_a"] = "yes.";
 
-$string['section3_q67']  = 'At a party you...';$string["personality_test:q69_b"] = "no.";
+$string['section3_q67']  = 'At a party you...';$string["mbti_93:q69_b"] = "no.";
 
 $string['section3_q67_a'] = 'talk most of the time';
 
-$string['section3_q67_b'] = 'prefer others to talk most of the time';$string["personality_test:q70"] = "Prefers results with facts and numbers rather than ideas and theories; prefers to hear things sequentially rather than randomly. ";
+$string['section3_q67_b'] = 'prefer others to talk most of the time';$string["mbti_93:q70"] = "Prefers results with facts and numbers rather than ideas and theories; prefers to hear things sequentially rather than randomly. ";
 
-$string["personality_test:q70_a"] = "yes.";
+$string["mbti_93:q70_a"] = "yes.";
 
-$string['section3_q68']  = 'The idea of making a to-do list for the weekend...';$string["personality_test:q70_b"] = "no.";
+$string['section3_q68']  = 'The idea of making a to-do list for the weekend...';$string["mbti_93:q70_b"] = "no.";
 
 $string['section3_q68_a'] = 'motivates you';
 
-$string['section3_q68_b'] = 'does not interest you';$string["personality_test:q71"] = "Likes to go to meetings and tends to voice his opinion; is actually frustrated if he is not given the opportunity to express his point of view.";
+$string['section3_q68_b'] = 'does not interest you';$string["mbti_93:q71"] = "Likes to go to meetings and tends to voice his opinion; is actually frustrated if he is not given the opportunity to express his point of view.";
 
-$string["personality_test:q71_a"] = "yes.";
+$string["mbti_93:q71_a"] = "yes.";
 
-$string['section3_q69']  = 'It is more flattering to be called...';$string["personality_test:q71_b"] = "no.";
+$string['section3_q69']  = 'It is more flattering to be called...';$string["mbti_93:q71_b"] = "no.";
 
 $string['section3_q69_a'] = 'competent';
 
-$string['section3_q69_b'] = 'compassionate';$string["personality_test:q72"] = "You enjoy the peace and quiet of having time to yourself; you find that your private time is easily invaded and tend to adapt by developing a high power of concentration.";
+$string['section3_q69_b'] = 'compassionate';$string["mbti_93:q72"] = "You enjoy the peace and quiet of having time to yourself; you find that your private time is easily invaded and tend to adapt by developing a high power of concentration.";
 
-$string["personality_test:q72_a"] = "yes.";
+$string["mbti_93:q72_a"] = "yes.";
 
-$string['section3_q70']  = 'You generally prefer...';$string["personality_test:q72_b"] = "no.";
+$string['section3_q70']  = 'You generally prefer...';$string["mbti_93:q72_b"] = "no.";
 
 $string['section3_q70_a'] = 'to schedule your social commitments with some freedom';
 
@@ -1306,9 +1306,9 @@ $string['no_participants_message'] = 'No students have completed the personality
 // Additional strings needed
 $string['participants_list'] = 'Participants List';
 
-$string['personality_test:addinstance'] = 'Add a new Personality Test block';$string['search_participant'] = 'Search participant...';
+$string['mbti_93:addinstance'] = 'Add a new Personality Test block';$string['search_participant'] = 'Search participant...';
 
-$string['personality_test:myaddinstance'] = 'Add a new Personality Test block to My Moodle';$string['export_csv'] = 'Export CSV';
+$string['mbti_93:myaddinstance'] = 'Add a new Personality Test block to My Moodle';$string['export_csv'] = 'Export CSV';
 
 $string['export_pdf'] = 'Export PDF';
 
@@ -1373,3 +1373,20 @@ $string['thinking'] = 'Thinking';
 $string['feeling'] = 'Feeling';
 $string['judging'] = 'Judging';
 $string['perceptive'] = 'Perceptive';
+
+// Admin view strings
+$string['student_name'] = 'Student Name';
+$string['actions'] = 'Actions';
+$string['view_details'] = 'View Details';
+$string['no_participants'] = 'No Participants Yet';
+$string['no_participants_message'] = 'No students have completed the personality test yet.';
+$string['participants_list'] = 'Participants List';
+$string['search_participant'] = 'Search by name or email...';
+$string['admin_manage_title'] = 'Manage MBTI Test Results';
+$string['back_to_admin'] = 'Back to Administration';
+$string['individual_results'] = 'Individual Results';
+$string['personality_dimensions'] = 'Personality Dimensions';
+$string['summary_actions'] = 'Summary and Actions';
+$string['download_pdf'] = 'Download PDF';
+$string['no_admin_access'] = 'You do not have permission to access this page.';
+$string['no_test_results'] = 'No test results found for this user.';

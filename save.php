@@ -1,14 +1,14 @@
 <?php
 require_once(__DIR__ . '/../../config.php');
 require_once(__DIR__ . '/lib.php');
-require_once($CFG->dirroot . '/blocks/personality_test/classes/personality_test_config.php');
+require_once($CFG->dirroot . '/blocks/mbti_93/classes/mbti_93_config.php');
 
 require_login();
 
 // Validación básica de seguridad y método
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !confirm_sesskey()) {
     // usar courseid (nombre del input enviado por view.php) al redirigir
-    redirect(new moodle_url('/blocks/personality_test/view.php', ['cid' => optional_param('courseid', 0, PARAM_INT), 'error' => 1]));
+    redirect(new moodle_url('/blocks/mbti_93/view.php', ['cid' => optional_param('courseid', 0, PARAM_INT), 'error' => 1]));
 }
 // Preparar el registro para la base de datos
 $courseid = optional_param('courseid', 0, PARAM_INT);
@@ -31,7 +31,7 @@ try {
         redirect(new moodle_url('/course/view.php', ['id' => $courseid]));
     }
 } catch (Exception $e) {
-    redirect(new moodle_url('/blocks/personality_test/view.php', ['cid' => $courseid, 'error' => 1]));
+    redirect(new moodle_url('/blocks/mbti_93/view.php', ['cid' => $courseid, 'error' => 1]));
 }
 
 // Inicializar acumuladores de puntajes
@@ -43,21 +43,21 @@ $scores = [
 ];
 
 // Detect input style: either the numeric array style used in the provided example
-// (inputs like 'personality_test:q1' with integer values) or the radio style
+// (inputs like 'mbti_93:q1' with integer values) or the radio style
 // generated in view.php (inputs 'q1' with values 'a'/'b').
 $postkeys = array_keys($_POST);
 $uses_numeric_array = false;
-// Algunas implementaciones envían un array anidado personality_test[q1] -> en PHP $_POST['personality_test'] = array(...)
-if (isset($_POST['personality_test']) && is_array($_POST['personality_test'])) {
+// Algunas implementaciones envían un array anidado mbti_93[q1] -> en PHP $_POST['mbti_93'] = array(...)
+if (isset($_POST['mbti_93']) && is_array($_POST['mbti_93'])) {
     $uses_numeric_array = true;
 } else {
     foreach ($postkeys as $k) {
         // Aceptar variantes de nombre de campo:
         //  - personaity_test:q1   (alguna implementación)
-        //  - personality_test[q1] (forma array en HTML)
-        //  - personality_test[1]   (forma indexada)
+        //  - mbti_93[q1] (forma array en HTML)
+        //  - mbti_93[1]   (forma indexada)
         // Además asegúrese de que la clave sea una cadena para evitar warnings.
-        if (is_string($k) && preg_match('/^personality_test(?::q\d+|\[q\d+\]|\[\d+\])$/', $k)) {
+        if (is_string($k) && preg_match('/^mbti_93(?::q\d+|\[q\d+\]|\[\d+\])$/', $k)) {
             $uses_numeric_array = true;
             break;
         }
@@ -67,27 +67,27 @@ if (isset($_POST['personality_test']) && is_array($_POST['personality_test'])) {
 $processed = 0;
 if ($uses_numeric_array) {
     // Seguir el ejemplo proporcionado: agrupar preguntas por dimensión y sumar valores enteros
-    $personality_test_a = array();
+    $mbti_93_a = array();
     // Leer respuestas numéricas (si faltan se toman como 0). Soportar varias variantes de nombre de campo:
-    //  - 'personality_test:q1' (clave plana)
-    //  - $_POST['personality_test']['q1'] (array anidado con prefijo 'q')
-    //  - $_POST['personality_test'][1] (array anidado indexado por número)
+    //  - 'mbti_93:q1' (clave plana)
+    //  - $_POST['mbti_93']['q1'] (array anidado con prefijo 'q')
+    //  - $_POST['mbti_93'][1] (array anidado indexado por número)
     for ($i = 1; $i <= 93; $i++) {
-        $key = 'personality_test:q' . $i;
+        $key = 'mbti_93:q' . $i;
         if (isset($_POST[$key])) {
             // valor directo según clave plana
-            $personality_test_a[$i] = (int)$_POST[$key];
+            $mbti_93_a[$i] = (int)$_POST[$key];
             $processed++;
-        } elseif (isset($_POST['personality_test']) && is_array($_POST['personality_test']) && isset($_POST['personality_test']['q' . $i])) {
-            // forma nested: personality_test['q1']
-            $personality_test_a[$i] = (int)$_POST['personality_test']['q' . $i];
+        } elseif (isset($_POST['mbti_93']) && is_array($_POST['mbti_93']) && isset($_POST['mbti_93']['q' . $i])) {
+            // forma nested: mbti_93['q1']
+            $mbti_93_a[$i] = (int)$_POST['mbti_93']['q' . $i];
             $processed++;
-        } elseif (isset($_POST['personality_test']) && is_array($_POST['personality_test']) && isset($_POST['personality_test'][$i])) {
-            // forma nested indexada: personality_test[1]
-            $personality_test_a[$i] = (int)$_POST['personality_test'][$i];
+        } elseif (isset($_POST['mbti_93']) && is_array($_POST['mbti_93']) && isset($_POST['mbti_93'][$i])) {
+            // forma nested indexada: mbti_93[1]
+            $mbti_93_a[$i] = (int)$_POST['mbti_93'][$i];
             $processed++;
         } else {
-            $personality_test_a[$i] = 0;
+            $mbti_93_a[$i] = 0;
         }
     }
 
@@ -111,14 +111,14 @@ if ($uses_numeric_array) {
     $estru_res = 0;
     $perce_res = 0;
 
-    foreach ($extra as $value) { $extra_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($intra as $value) { $intra_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($sensi as $value) { $sensi_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($intui as $value) { $intui_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($ratio as $value) { $ratio_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($emoti as $value) { $emoti_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($estru as $value) { $estru_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
-    foreach ($perce as $value) { $perce_res += (isset($personality_test_a[$value]) ? $personality_test_a[$value] : 0); }
+    foreach ($extra as $value) { $extra_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($intra as $value) { $intra_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($sensi as $value) { $sensi_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($intui as $value) { $intui_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($ratio as $value) { $ratio_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($emoti as $value) { $emoti_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($estru as $value) { $estru_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
+    foreach ($perce as $value) { $perce_res += (isset($mbti_93_a[$value]) ? $mbti_93_a[$value] : 0); }
 
     // Mapear estos totales a los campos de $scores para mantener compatibilidad
     $scores['E'] = $extra_res;
@@ -143,11 +143,11 @@ if ($uses_numeric_array) {
 
         // Validar respuesta
         if ($answer !== 'a' && $answer !== 'b') {
-            redirect(new moodle_url('/blocks/personality_test/view.php', ['cid' => $courseid, 'error' => 1]));
+            redirect(new moodle_url('/blocks/mbti_93/view.php', ['cid' => $courseid, 'error' => 1]));
         }
 
         // Procesar la respuesta usando la configuración (get_assigned_trait dentro)
-        $traits = PersonalityTestConfig::process_answer($i, $answer);
+        $traits = MbtiConfig::process_answer($i, $answer);
         foreach ($traits as $trait => $points) {
             if (isset($scores[$trait])) {
                 $scores[$trait] += $points;
@@ -159,14 +159,14 @@ if ($uses_numeric_array) {
 
 // Si no procesamos ninguna pregunta, probablemente hubo un problema con el form
 if ($processed === 0) {
-    redirect(new moodle_url('/blocks/personality_test/view.php', ['cid' => $courseid, 'error' => 1]));
+    redirect(new moodle_url('/blocks/mbti_93/view.php', ['cid' => $courseid, 'error' => 1]));
 }
 
 // Calcular porcentajes finales
-$percentages = PersonalityTestConfig::calculate_percentages($scores);
+$percentages = MbtiConfig::calculate_percentages($scores);
 
 // Determinar tipo MBTI
-    $mbti_type = PersonalityTestConfig::determine_mbti_type($percentages);
+    $mbti_type = MbtiConfig::determine_mbti_type($percentages);
 
 // Preparar el registro para la base de datos
 $record = new stdClass();
@@ -199,7 +199,7 @@ $record->perce_res = isset($perce_res) ? $perce_res : 0;
 $record->state = 0;
 
 // Timestamps
-$record->created_at = time();
+$record->time_done = time();
 $record->updated_at = time();
 
 try {
@@ -214,5 +214,5 @@ try {
     // Si hay un error al guardar, escribir en log y redireccionar a la página del test con mensaje de error
     error_log('Error inserting personality test record: ' . $e->getMessage());
     error_log('Record attempted: ' . print_r($record, true));
-    redirect(new moodle_url('/blocks/personality_test/view.php', ['cid' => $courseid, 'error' => 1]));
+    redirect(new moodle_url('/blocks/mbti_93/view.php', ['cid' => $courseid, 'error' => 1]));
 }

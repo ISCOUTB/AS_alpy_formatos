@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<XMLDB PATH="blocks/personality_test/db" VERSION="2025101401" COMMENT="XMLDB for block_personality_test"
+<XMLDB PATH="blocks/mbti_93/db" VERSION="2025101401" COMMENT="XMLDB for block_mbti_93"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd">
   <TABLES>

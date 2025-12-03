@@ -1,8 +1,7 @@
-<?php 
+<?php
+defined('MOODLE_INTERNAL') || die();
 
-require_once(dirname(__FILE__) . '/../../config.php');
-
-function save_personality_test($course,$extra_res,$intra_res,$sensi_res,$intui_res,$ratio_res,$emoti_res,$estru_res,$perce_res) {
+function save_mbti_93($course,$extra_res,$intra_res,$sensi_res,$intui_res,$ratio_res,$emoti_res,$estru_res,$perce_res) {
     GLOBAL $DB, $USER, $CFG;
     if (!$entry = $DB->get_record('personality_test', array('user' => $USER->id, 'course' => $course))) {
         $entry = new stdClass();
@@ -17,7 +16,7 @@ function save_personality_test($course,$extra_res,$intra_res,$sensi_res,$intui_r
         $entry->feeling = $emoti_res;
         $entry->judging = $estru_res;
         $entry->perceptive = $perce_res;
-        $entry->created_at = time();
+        $entry->time_done = time();
         $entry->updated_at = time();
         $entry->id = $DB->insert_record('personality_test', $entry);
         return true;

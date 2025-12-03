@@ -22,22 +22,22 @@ $context = context_course::instance($course->id);
 // Definir las secciones del test
 $sections = array(
     'section1' => array(
-        'title' => get_string('section1_title', 'block_personality_test'),
+        'title' => get_string('section1_title', 'block_mbti_93'),
         'start' => 1,
         'end' => 26
     ),
     'section2' => array(
-        'title' => get_string('section2_title', 'block_personality_test'),
+        'title' => get_string('section2_title', 'block_mbti_93'),
         'start' => 27,
         'end' => 58
     ),
     'section3' => array(
-        'title' => get_string('section3_title', 'block_personality_test'),
+        'title' => get_string('section3_title', 'block_mbti_93'),
         'start' => 59,
         'end' => 75
     ),
     'section4' => array(
-        'title' => get_string('section4_title', 'block_personality_test'),
+        'title' => get_string('section4_title', 'block_mbti_93'),
         'start' => 76,
         'end' => 93
     )
@@ -46,14 +46,14 @@ $sections = array(
 try {
     $PAGE->set_context($context);
     $PAGE->set_course($course);
-    $PAGE->set_url(new moodle_url('/blocks/personality_test/view.php', array('cid' => $courseid)));
-    $title = get_string('pluginname', 'block_personality_test');
+    $PAGE->set_url(new moodle_url('/blocks/mbti_93/view.php', array('cid' => $courseid)));
+    $title = get_string('pluginname', 'block_mbti_93');
     $PAGE->set_title($title . ' : ' . format_string($course->fullname));
     $PAGE->set_heading($title . ' : ' . format_string($course->fullname));
 
     // Agregar los estilos y JavaScript necesarios
-    $PAGE->requires->css(new moodle_url('/blocks/personality_test/styles.css'));
-    $PAGE->requires->js_call_amd('block_personality_test/navigation', 'init');
+    $PAGE->requires->css(new moodle_url('/blocks/mbti_93/styles.css'));
+    $PAGE->requires->js_call_amd('block_mbti_93/navigation', 'init');
 
     echo $OUTPUT->header();
     echo '<script type="text/javascript">
@@ -208,14 +208,14 @@ try {
 
     // Barra lateral de navegación
     echo '<div class="section-navigation">';
-    echo '<div class="section-navigation-header">'.get_string('test_sections', 'block_personality_test').'</div>';
+    echo '<div class="section-navigation-header">'.get_string('test_sections', 'block_mbti_93').'</div>';
     echo '<ul class="section-navigation-list">';
     $section_num = 1;
     foreach ($sections as $id => $section) {
         $num_questions = $section['end'] - $section['start'] + 1;
         echo '<li class="section-navigation-item" data-section="'.$id.'">';
         echo '<a href="#'.$id.'" class="section-link">Sección '.$section_num.'</a>';
-        echo '<span class="progress-indicator">0/'.$num_questions.'</span>';
+        echo '<span class="progress-indicator" style="display:none;">0/'.$num_questions.'</span>';
         echo '</li>';
         $section_num++;
     }
@@ -224,7 +224,7 @@ try {
 
     // Contenido principal
     echo '<div class="test-content">';
-    echo '<form id="personality-test-form" method="post" action="'.new moodle_url('/blocks/personality_test/save.php').'">';
+    echo '<form id="personality-test-form" method="post" action="'.new moodle_url('/blocks/mbti_93/save.php').'">';
     echo '<input type="hidden" name="courseid" value="'.$courseid.'">';
     echo '<input type="hidden" name="sesskey" value="'.sesskey().'">';
 
@@ -244,25 +244,25 @@ try {
         if ($section_number == 1) {
             // Primera sección: solo botón siguiente
             echo '<button type="button" class="btn btn-primary next-section" data-target="section2">'.
-                get_string('next_section', 'block_personality_test').'</button>';
+                get_string('next_section', 'block_mbti_93').'</button>';
         } else if ($section_number == $total_sections) {
             // Última sección: solo botón anterior
             echo '<button type="button" class="btn btn-secondary prev-section" data-target="section'.($section_number-1).'">'.
-                get_string('previous_section', 'block_personality_test').'</button>';
+                get_string('previous_section', 'block_mbti_93').'</button>';
         } else {
             // Secciones intermedias: botón anterior y siguiente
             echo '<button type="button" class="btn btn-secondary prev-section" data-target="section'.($section_number-1).'">'.
-                get_string('previous_section', 'block_personality_test').'</button>';
+                get_string('previous_section', 'block_mbti_93').'</button>';
             echo '<button type="button" class="btn btn-primary next-section" data-target="section'.($section_number+1).'">'.
-                get_string('next_section', 'block_personality_test').'</button>';
+                get_string('next_section', 'block_mbti_93').'</button>';
         }
         echo '</div>';
         
         echo '<div class="section-header">';
         // Mostrar el título/instrucción de la sección
         $section_title_key = 'section'.$section_number.'_title';
-        if ($string_manager->string_exists($section_title_key, 'block_personality_test')) {
-            echo '<h3 class="section-title">'.format_string(get_string($section_title_key, 'block_personality_test')).'</h3>';
+        if ($string_manager->string_exists($section_title_key, 'block_mbti_93')) {
+            echo '<h3 class="section-title">'.format_string(get_string($section_title_key, 'block_mbti_93')).'</h3>';
         }
         echo '</div>';
         echo '<div class="section-questions">';        // Mostrar las preguntas de la sección
@@ -274,25 +274,25 @@ try {
 
                 // Las secciones 2 y 4 usan la instrucción genérica
                 if ($section_number == 2 || $section_number == 4) {
-                    $question_text = get_string('section'.$section_number.'_instruction', 'block_personality_test');
+                    $question_text = get_string('section'.$section_number.'_instruction', 'block_mbti_93');
                 }
 
                 // Obtener el texto de la pregunta y opciones según la sección
                 $section_key = 'section'.$section_number.'_q'.$qnum;
                 
                 // Si existe la pregunta específica para esta sección, la usamos
-                if ($string_manager->string_exists($section_key, 'block_personality_test')) {
-                    $question_text = get_string($section_key, 'block_personality_test');
+                if ($string_manager->string_exists($section_key, 'block_mbti_93')) {
+                    $question_text = get_string($section_key, 'block_mbti_93');
                 }
                 
                 // Obtener las opciones
                 $option_a_key = 'section'.$section_number.'_q'.$qnum.'_a';
                 $option_b_key = 'section'.$section_number.'_q'.$qnum.'_b';
                 
-                if ($string_manager->string_exists($option_a_key, 'block_personality_test') && 
-                    $string_manager->string_exists($option_b_key, 'block_personality_test')) {
-                    $option_a = get_string($option_a_key, 'block_personality_test');
-                    $option_b = get_string($option_b_key, 'block_personality_test');
+                if ($string_manager->string_exists($option_a_key, 'block_mbti_93') && 
+                    $string_manager->string_exists($option_b_key, 'block_mbti_93')) {
+                    $option_a = get_string($option_a_key, 'block_mbti_93');
+                    $option_b = get_string($option_b_key, 'block_mbti_93');
                     
                     echo '<div class="question-container" data-question="'.$qnum.'">';
                     if (!empty($question_text)) {
@@ -315,19 +315,19 @@ try {
         if ($section_number == 1) {
             // Primera sección: solo botón siguiente
             echo '<button type="button" class="btn btn-primary next-section" data-target="section2">'.
-                get_string('next_section', 'block_personality_test').'</button>';
+                get_string('next_section', 'block_mbti_93').'</button>';
         } else if ($section_number == $total_sections) {
             // Última sección: botón anterior y enviar
             echo '<button type="button" class="btn btn-secondary prev-section" data-target="section'.($section_number-1).'">'.
-                get_string('previous_section', 'block_personality_test').'</button>';
+                get_string('previous_section', 'block_mbti_93').'</button>';
             echo '<button type="submit" class="btn btn-success submit-test" disabled>'.
-                get_string('submit_test', 'block_personality_test').'</button>';
+                get_string('submit_test', 'block_mbti_93').'</button>';
         } else {
             // Secciones intermedias: botón anterior y siguiente
             echo '<button type="button" class="btn btn-secondary prev-section" data-target="section'.($section_number-1).'">'.
-                get_string('previous_section', 'block_personality_test').'</button>';
+                get_string('previous_section', 'block_mbti_93').'</button>';
             echo '<button type="button" class="btn btn-primary next-section" data-target="section'.($section_number+1).'">'.
-                get_string('next_section', 'block_personality_test').'</button>';
+                get_string('next_section', 'block_mbti_93').'</button>';
         }
         echo '</div>';
         
@@ -364,11 +364,50 @@ try {
                     navItem.classList.add("active");
                 }
                 
+                // Actualizar visibilidad de botones según la sección actual
+                var allSections = document.querySelectorAll(".test-section");
+                var sectionIndex = Array.from(allSections).indexOf(toSection);
+                var totalSections = allSections.length;
+                
+                // Ocultar todos los botones primero
+                document.querySelectorAll(".prev-section").forEach(function(btn) {
+                    btn.style.display = "none";
+                });
+                document.querySelectorAll(".next-section").forEach(function(btn) {
+                    btn.style.display = "none";
+                });
+                document.querySelectorAll(".submit-test").forEach(function(btn) {
+                    btn.style.display = "none";
+                });
+                
+                // Mostrar botones apropiados dentro de la sección actual
+                if (sectionIndex === 0) {
+                    // Primera sección: solo botón siguiente
+                    toSection.querySelectorAll(".next-section").forEach(function(btn) {
+                        btn.style.display = "inline-block";
+                    });
+                } else if (sectionIndex === totalSections - 1) {
+                    // Última sección: botón anterior y submit
+                    toSection.querySelectorAll(".prev-section").forEach(function(btn) {
+                        btn.style.display = "inline-block";
+                    });
+                    toSection.querySelectorAll(".submit-test").forEach(function(btn) {
+                        btn.style.display = "inline-block";
+                    });
+                } else {
+                    // Secciones intermedias: botones anterior y siguiente
+                    toSection.querySelectorAll(".prev-section").forEach(function(btn) {
+                        btn.style.display = "inline-block";
+                    });
+                    toSection.querySelectorAll(".next-section").forEach(function(btn) {
+                        btn.style.display = "inline-block";
+                    });
+                }
+                
                 // Actualizar estado del botón Submit
-                var submitBtn = document.querySelector(".submit-test");
+                var submitBtn = toSection.querySelector(".submit-test");
                 if (submitBtn) {
                     // Verificar si todas las preguntas están respondidas
-                    var allSections = document.querySelectorAll(".test-section");
                     var allAnswered = true;
                     allSections.forEach(function(section) {
                         var total = section.querySelectorAll(".question-container").length;

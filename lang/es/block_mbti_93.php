@@ -1,13 +1,13 @@
 <?php
-$string['pluginname'] = 'Test de Personalidad 93';
+$string['pluginname'] = 'Test MBTI 93';
 $string['code_honor_text'] = '<p>Por favor, lee atentamente las instrucciones antes de comenzar el test.</p>';
 $string['accept_code_honor_text'] = 'Acepto';
 $string['redirect_accept_success'] = 'Gracias, ahora serás redirigido a la página del curso.';
 $string['redirect_accept_exist'] = 'Ya has completado el test, redirigiendo al curso.';
 $string['accept_message'] = 'Personalidad detectada';
 $string['required_message'] = 'Por favor completa la evaluación de personalidad para continuar';
-$string['personality_test_actived'] = 'Test de personalidad activado';
-$string['personality_test_configempty'] = 'Por favor configura este bloque';
+$string['mbti_93_actived'] = 'Test de personalidad activado';
+$string['mbti_93_configempty'] = 'Por favor configura este bloque';
 $string['submit_text'] = 'Enviar Test de Personalidad';
 $string['sin_datos_estudiantes'] = 'No hay datos de estudiantes disponibles';
 $string['titulo_resultados_estudiantes'] = 'Resultados de Estudiantes';
@@ -402,8 +402,8 @@ $string['section4_q93_a'] = 'Práctico';
 $string['section4_q93_b'] = 'Innovador';
 
 // Cadenas adicionales necesarias
-$string['personality_test:addinstance'] = 'Añadir un nuevo bloque de Test de Personalidad';
-$string['personality_test:myaddinstance'] = 'Añadir un nuevo bloque de Test de Personalidad a Mi Moodle';
+$string['mbti_93:addinstance'] = 'Añadir un nuevo bloque de Test de Personalidad';
+$string['mbti_93:myaddinstance'] = 'Añadir un nuevo bloque de Test de Personalidad a Mi Moodle';
 
 // Cadenas para reportes
 $string['PDF'] = 'Descargar PDF';
@@ -430,3 +430,29 @@ $string['Pensamiento'] = 'Pensamiento';
 $string['Sentimiento'] = 'Sentimiento';
 $string['Juicio'] = 'Juicio';
 $string['Percepcion'] = 'Percepción';
+
+// Navegación del formulario
+$string['next_section'] = 'Siguiente sección';
+$string['previous_section'] = 'Sección anterior';
+$string['submit_test'] = 'Enviar test';
+$string['test_sections'] = 'Secciones del test';
+
+// Admin view strings
+$string['student_name'] = 'Nombre del Estudiante';
+$string['actions'] = 'Acciones';
+$string['view_details'] = 'Ver Detalles';
+$string['no_participants'] = 'Aún No Hay Participantes';
+$string['no_participants_message'] = 'Ningún estudiante ha completado el test de personalidad todavía.';
+$string['participants_list'] = 'Lista de Participantes';
+$string['search_participant'] = 'Buscar por nombre o email...';
+$string['admin_manage_title'] = 'Gestionar Resultados del Test MBTI';
+$string['back_to_admin'] = 'Volver a Administración';
+$string['individual_results'] = 'Resultados Individuales';
+$string['personality_dimensions'] = 'Dimensiones de Personalidad';
+$string['summary_actions'] = 'Resumen y Acciones';
+$string['download_pdf'] = 'Descargar PDF';
+$string['test_date'] = 'Fecha del Test';
+$string['email'] = 'Correo Electrónico';
+$string['mbti_type'] = 'Tipo MBTI';
+$string['no_admin_access'] = 'No tienes permiso para acceder a esta página.';
+$string['no_test_results'] = 'No se encontraron resultados del test para este usuario.';

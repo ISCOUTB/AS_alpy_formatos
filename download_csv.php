@@ -2,7 +2,7 @@
 /**
  * Descarga los resultados agregados del test de personalidad en formato CSV.
  *
- * @package   block_personality_test
+ * @package   block_mbti_93
  */
 
 require_once(__DIR__ . '/../../config.php');
@@ -31,7 +31,7 @@ $students = $DB->get_records('personality_test', ['course' => $course->id]);
 if (empty($students)) {
     // Redirigir si no hay datos, con un mensaje
     redirect(new moodle_url('/course/view.php', ['id' => $course->id]), 
-             get_string('sin_datos_estudiantes_pdf', 'block_personality_test'), 5);
+             get_string('sin_datos_estudiantes_pdf', 'block_mbti_93'), 5);
     exit;
 }
 
@@ -95,15 +95,15 @@ $output = fopen('php://output', 'w');
 fprintf($output, chr(0xEF).chr(0xBB).chr(0xBF));
 
 // --- SECCIÓN DE METADATOS ---
-fputcsv($output, [get_string('pdf_report_title', 'block_personality_test')]);
-fputcsv($output, [get_string('pdf_report_subject', 'block_personality_test', $course->fullname)]);
-fputcsv($output, [get_string('generated_on', 'block_personality_test') . ': ' . userdate(time(), get_string('strftimedatefullshort', 'langconfig'))]);
-fputcsv($output, [get_string('total_students_processed', 'block_personality_test', count($students))]);
+fputcsv($output, [get_string('pdf_report_title', 'block_mbti_93')]);
+fputcsv($output, [get_string('pdf_report_subject', 'block_mbti_93', $course->fullname)]);
+fputcsv($output, [get_string('generated_on', 'block_mbti_93') . ': ' . userdate(time(), get_string('strftimedatefullshort', 'langconfig'))]);
+fputcsv($output, [get_string('total_students_processed', 'block_mbti_93', count($students))]);
 fputcsv($output, [' ']); // Línea en blanco para separar secciones
 
 // --- SECCIÓN DE DISTRIBUCIÓN MBTI ---
-fputcsv($output, [get_string('titulo_distribucion_mbti', 'block_personality_test')]);
-fputcsv($output, [get_string('mbti_type', 'block_personality_test'), get_string('count', 'block_personality_test'), get_string('percentage', 'block_personality_test')]);
+fputcsv($output, [get_string('titulo_distribucion_mbti', 'block_mbti_93')]);
+fputcsv($output, [get_string('mbti_type', 'block_mbti_93'), get_string('count', 'block_mbti_93'), get_string('percentage', 'block_mbti_93')]);
 
 // Calcular total para porcentajes
 $total_mbti = array_sum(array_values($mbti_count));
@@ -118,45 +118,45 @@ foreach ($mbti_count as $type => $count) {
 fputcsv($output, [' ']); // Línea en blanco para separar secciones
 
 // --- SECCIÓN DE DISTRIBUCIÓN DE RASGOS ---
-fputcsv($output, [get_string('titulo_distribucion_rasgos', 'block_personality_test')]);
+fputcsv($output, [get_string('titulo_distribucion_rasgos', 'block_mbti_93')]);
 
 // Introversión / Extroversión
-fputcsv($output, [get_string('introversion_extroversion', 'block_personality_test')]);
-fputcsv($output, [get_string('trait', 'block_personality_test'), get_string('count', 'block_personality_test')]);
-fputcsv($output, [get_string('Introvertido', 'block_personality_test'), $aspect_counts['Introvertido']]);
-fputcsv($output, [get_string('Extrovertido', 'block_personality_test'), $aspect_counts['Extrovertido']]);
+fputcsv($output, [get_string('introversion_extroversion', 'block_mbti_93')]);
+fputcsv($output, [get_string('trait', 'block_mbti_93'), get_string('count', 'block_mbti_93')]);
+fputcsv($output, [get_string('Introvertido', 'block_mbti_93'), $aspect_counts['Introvertido']]);
+fputcsv($output, [get_string('Extrovertido', 'block_mbti_93'), $aspect_counts['Extrovertido']]);
 fputcsv($output, [' ']);
 
 // Sensación / Intuición
-fputcsv($output, [get_string('sensacion_intuicion', 'block_personality_test')]);
-fputcsv($output, [get_string('trait', 'block_personality_test'), get_string('count', 'block_personality_test')]);
-fputcsv($output, [get_string('Sensing', 'block_personality_test'), $aspect_counts['Sensing']]);
-fputcsv($output, [get_string('Intuicion', 'block_personality_test'), $aspect_counts['Intuición']]);
+fputcsv($output, [get_string('sensacion_intuicion', 'block_mbti_93')]);
+fputcsv($output, [get_string('trait', 'block_mbti_93'), get_string('count', 'block_mbti_93')]);
+fputcsv($output, [get_string('Sensing', 'block_mbti_93'), $aspect_counts['Sensing']]);
+fputcsv($output, [get_string('Intuicion', 'block_mbti_93'), $aspect_counts['Intuición']]);
 fputcsv($output, [' ']);
 
 // Pensamiento / Sentimiento
-fputcsv($output, [get_string('pensamiento_sentimiento', 'block_personality_test')]);
-fputcsv($output, [get_string('trait', 'block_personality_test'), get_string('count', 'block_personality_test')]);
-fputcsv($output, [get_string('Pensamiento', 'block_personality_test'), $aspect_counts['Pensamiento']]);
-fputcsv($output, [get_string('Sentimiento', 'block_personality_test'), $aspect_counts['Sentimiento']]);
+fputcsv($output, [get_string('pensamiento_sentimiento', 'block_mbti_93')]);
+fputcsv($output, [get_string('trait', 'block_mbti_93'), get_string('count', 'block_mbti_93')]);
+fputcsv($output, [get_string('Pensamiento', 'block_mbti_93'), $aspect_counts['Pensamiento']]);
+fputcsv($output, [get_string('Sentimiento', 'block_mbti_93'), $aspect_counts['Sentimiento']]);
 fputcsv($output, [' ']);
 
 // Juicio / Percepción
-fputcsv($output, [get_string('juicio_percepcion', 'block_personality_test')]);
-fputcsv($output, [get_string('trait', 'block_personality_test'), get_string('count', 'block_personality_test')]);
-fputcsv($output, [get_string('Juicio', 'block_personality_test'), $aspect_counts['Juicio']]);
-fputcsv($output, [get_string('Percepcion', 'block_personality_test'), $aspect_counts['Percepción']]);
+fputcsv($output, [get_string('juicio_percepcion', 'block_mbti_93')]);
+fputcsv($output, [get_string('trait', 'block_mbti_93'), get_string('count', 'block_mbti_93')]);
+fputcsv($output, [get_string('Juicio', 'block_mbti_93'), $aspect_counts['Juicio']]);
+fputcsv($output, [get_string('Percepcion', 'block_mbti_93'), $aspect_counts['Percepción']]);
 fputcsv($output, [' ']);
 fputcsv($output, [' ']);
 
 // --- SECCIÓN DE DATOS DETALLADOS ---
-fputcsv($output, [get_string('summary_information', 'block_personality_test') . ' - ' . get_string('csv_header_fullname', 'block_personality_test')]);
+fputcsv($output, [get_string('summary_information', 'block_mbti_93') . ' - ' . get_string('csv_header_fullname', 'block_mbti_93')]);
 fputcsv($output, [
-    get_string('csv_header_userid', 'block_personality_test'),
-    get_string('csv_header_fullname', 'block_personality_test'),
-    get_string('csv_header_mbti_type', 'block_personality_test'),
+    get_string('csv_header_userid', 'block_mbti_93'),
+    get_string('csv_header_fullname', 'block_mbti_93'),
+    get_string('csv_header_mbti_type', 'block_mbti_93'),
     'E', 'I', 'S', 'N', 'T', 'F', 'J', 'P',
-    get_string('csv_header_date', 'block_personality_test')
+    get_string('csv_header_date', 'block_mbti_93')
 ]);
 
 // Procesar y escribir datos de cada estudiante
@@ -192,7 +192,7 @@ foreach ($students as $entry) {
         $entry->feeling,
         $entry->judging,
         $entry->perceptive,
-        userdate($entry->created_at, get_string('strftimedatefullshort', 'langconfig'))
+        userdate($entry->time_done, get_string('strftimedatefullshort', 'langconfig'))
     ]);
 }
 

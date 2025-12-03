@@ -186,7 +186,7 @@ define(['jquery', 'core/str', 'core/notification'], function($, Str, Notificatio
                 if (unanswered.length) {
                     e.preventDefault();
                     // Obtener el mensaje de error localizado
-                    Str.get_string('please_answer_all', 'block_personality_test')
+                    Str.get_string('please_answer_all', 'block_test_personalidad_93')
                         .then(function(message) {
                             // Mostrar notificación de Moodle
                             Notification.alert('', message);
